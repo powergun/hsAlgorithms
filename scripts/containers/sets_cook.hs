@@ -36,6 +36,10 @@ main = do
   print (S.lookupGE 5 fromL)
   print (S.member 4 fromL)
 
+  -- MY NOTES: implement Python's set (-) operator
+  print (S.intersection insS $ S.difference insS singleS)
+  print (S.intersection singleS $ S.difference insS singleS)
+
   demoSetFold
 
 
