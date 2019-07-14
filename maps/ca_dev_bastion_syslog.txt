@@ -1,0 +1,934 @@
+ at 2019-07-13 07:02:32 +0000 UTC, system will sleep for 3m10.712896592s
+Jul 13 06:59:21 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 06:59:21 INFO [LongRunningPluginsManager] There are no long running plugins currently getting executed - skipping their healthcheck
+Jul 13 06:59:21 dev-bastion ntpd[1329]: Soliciting pool server 91.189.91.157
+Jul 13 06:59:32 dev-bastion ntpd[1329]: Soliciting pool server 69.164.203.231
+Jul 13 06:59:51 dev-bastion ntpd[1329]: Soliciting pool server 69.89.207.199
+Jul 13 06:59:57 dev-bastion ntpd[1329]: Soliciting pool server 216.229.4.66
+Jul 13 07:00:01 dev-bastion CRON[6338]: (root) CMD (/opt/iam/import_keys.sh | logger -t import-keys)
+Jul 13 07:00:01 dev-bastion CRON[6341]: (root) CMD (/opt/iam/import_users.sh | logger -t import-users)
+Jul 13 07:00:01 dev-bastion CRON[6343]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:00:01 dev-bastion import-users: [07:00:01] configure_groups: Configuring groups for dev.
+Jul 13 07:00:01 dev-bastion import-users: [07:00:01] configure_groups: Syncronizing groups for jump.dev
+Jul 13 07:00:01 dev-bastion import-users: [07:00:01] configure_groups: Setting permissions for group dev
+Jul 13 07:00:01 dev-bastion import-users: [07:00:01] configure_groups: Setting permissions for /var/canva
+Jul 13 07:00:07 dev-bastion import-users: [07:00:07] import_users: Importing IAM group bastion with users: adam adam.e ahmed alejandro alessandro alex alexander alex.z alvi andrei.t andres andrew.l andrew.t andy angus anna.a annie anthony anton.e anton.s arnold.a arran arthur artur ashwanth ashwin belen.g bella benjamin.f benjamin.lea benji ben.m ben.sejas ben.t brady brendan brendan.annable bryce caly carl charles chester chris.chen chris.g christian christopher chuxin connor cuong daniel.m danju darren dave dave.d davey david davidguan declan delan denis.t desiree.s dmitry dmitry.v dominique eric eugene fraser gabriela garwah george.crabtree gerald gidon glen greg gustavo guy.n hamish.durkin han hansel henry huan igor irene jacob jade james.browning jessica.e jim jin joanne john jon jonathan jonathon jordan joscha jose josh.a josh.batchelor josh.l joshua.f judd karen katia kaveh ken.t kevin kevin.d kha kim.l kirk.f kosta krishna kris.w lawrence.law lee.p liji lily llewellyn lorena luisma luke luke.l mansour marc ma
+Jul 13 07:00:07 dev-bastion import-users: rco.lacava mark.p martin martin.l matt.c max michael.f michael.kendra michael.pearson michael.s mike mikhail miles mindaugas minh mitchell modrzew moe mudassir natalia neil nic.b nick nick.h nic.l nik nikola nissa norman oleg oleg.p owen.b owen.callanan patrick.r paul paul.b paul.bogg paul.s paul.t paul.thompson paulwyn pavel payton phuong qing quang ranie raunaq raz reynaldo richard.guan robbie robert roman.a ross ruoran saffat sam.c sam.killin sam.parkinson sam.w sasha saxon seb seb.r sergey sergey.g sharon sijie sinatra spirit stanislav.s stephan.schwiebert stephen steven stewart sughosh sylvain.b takashi theeban thibaut tim toby toby.s tomas tomasz tristan umran uri valerie verity vika vikrant vilius vincey vlad wade wei weng will will.r xavier xidorn yaseen yiwei yu yuliia zahra zcharles zehua zoe
+Jul 13 07:00:07 dev-bastion import-users: brendan ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:00:08 dev-bastion import-users: lee.p ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:00:08 dev-bastion import-users: mindaugas ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:00:08 dev-bastion import-users: moe ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:00:09 dev-bastion import-users: seb ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:00:09 dev-bastion import-users: wei ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:00:09 dev-bastion import-users: zcharles ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user adam to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user adam.e to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user ahmed to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user alejandro to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user alessandro to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user alex to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user alexander to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user alex.z to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user alvi to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user andrei.t to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user andres to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user andrew.l to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user andrew.t to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user andy to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user angus to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user anna.a to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user annie to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user anthony to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user anton.e to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user anton.s to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user arnold.a to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user arran to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user arthur to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user artur to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user ashwanth to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user ashwin to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user belen.g to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user bella to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user benjamin.f to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user benjamin.lea to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user benji to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user ben.m to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user ben.sejas to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user ben.t to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user brady to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user brendan to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user brendan.annable to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user bryce to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user caly to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user carl to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user charles to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user chester to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user chris.chen to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user chris.g to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user christian to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user christopher to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user chuxin to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user connor to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user cuong to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user daniel.m to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user danju to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user darren to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user dave to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user dave.d to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user davey to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user david to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user davidguan to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user declan to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user delan to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user denis.t to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user desiree.s to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user dmitry to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user dmitry.v to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user dominique to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user eric to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user eugene to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user fraser to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user gabriela to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user garwah to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user george.crabtree to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user gerald to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user gidon to group bastion
+Jul 13 07:00:09 dev-bastion import-users: [07:00:09] import_users: Adding user glen to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user greg to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user gustavo to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user guy.n to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user hamish.durkin to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user han to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user hansel to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user henry to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user huan to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user igor to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user irene to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user jacob to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user jade to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user james.browning to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user jessica.e to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user jim to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user jin to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user joanne to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user john to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user jon to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user jonathan to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user jonathon to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user jordan to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user joscha to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user jose to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user josh.a to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user josh.batchelor to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user josh.l to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user joshua.f to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user judd to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user karen to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user katia to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user kaveh to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user ken.t to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user kevin to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user kevin.d to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user kha to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user kim.l to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user kirk.f to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user kosta to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user krishna to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user kris.w to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user lawrence.law to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user lee.p to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user liji to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user lily to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user llewellyn to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user lorena to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user luisma to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user luke to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user luke.l to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user mansour to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user marc to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user marco.lacava to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user mark.p to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user martin to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user martin.l to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user matt.c to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user max to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user michael.f to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user michael.kendra to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user michael.pearson to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user michael.s to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user mike to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user mikhail to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user miles to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user mindaugas to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user minh to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user mitchell to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user modrzew to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user moe to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user mudassir to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user natalia to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user neil to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user nic.b to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user nick to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user nick.h to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user nic.l to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user nik to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user nikola to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user nissa to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user norman to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user oleg to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user oleg.p to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user owen.b to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user owen.callanan to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user patrick.r to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user paul to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user paul.b to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user paul.bogg to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user paul.s to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user paul.t to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user paul.thompson to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user paulwyn to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user pavel to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user payton to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user phuong to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user qing to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user quang to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user ranie to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user raunaq to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user raz to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user reynaldo to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user richard.guan to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user robbie to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user robert to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user roman.a to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user ross to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user ruoran to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user saffat to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sam.c to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sam.killin to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sam.parkinson to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sam.w to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sasha to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user saxon to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user seb to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user seb.r to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sergey to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sergey.g to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sharon to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sijie to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sinatra to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user spirit to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user stanislav.s to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user stephan.schwiebert to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user stephen to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user steven to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user stewart to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sughosh to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user sylvain.b to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user takashi to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user theeban to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user thibaut to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user tim to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user toby to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user toby.s to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user tomas to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user tomasz to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user tristan to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user umran to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user uri to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user valerie to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user verity to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user vika to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user vikrant to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user vilius to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user vincey to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user vlad to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user wade to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user wei to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user weng to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user will to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user will.r to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user xavier to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user xidorn to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user yaseen to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user yiwei to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user yu to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user yuliia to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user zahra to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user zcharles to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user zehua to group bastion
+Jul 13 07:00:10 dev-bastion import-users: [07:00:10] import_users: Adding user zoe to group bastion
+Jul 13 07:00:13 dev-bastion ntpd[1329]: Soliciting pool server 74.117.214.2
+Jul 13 07:00:25 dev-bastion ntpd[1329]: Soliciting pool server 91.189.94.4
+Jul 13 07:00:38 dev-bastion ntpd[1329]: Soliciting pool server 108.59.2.24
+Jul 13 07:00:55 dev-bastion ntpd[1329]: Soliciting pool server 45.33.103.94
+Jul 13 07:01:01 dev-bastion CRON[10747]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:01:03 dev-bastion ntpd[1329]: Soliciting pool server 198.50.238.163
+Jul 13 07:01:20 dev-bastion ntpd[1329]: Soliciting pool server 159.203.82.102
+Jul 13 07:01:29 dev-bastion ntpd[1329]: Soliciting pool server 2001:67c:1560:8003::c8
+Jul 13 07:01:38 dev-bastion dhclient[894]: DHCPREQUEST of 10.0.0.7 on ens5 to 10.0.0.1 port 67 (xid=0x7316f8e1)
+Jul 13 07:01:38 dev-bastion dhclient[894]: DHCPACK of 10.0.0.7 from 10.0.0.1
+Jul 13 07:01:38 dev-bastion dhclient[894]: bound to 10.0.0.7 -- renewal in 1547 seconds.
+Jul 13 07:01:42 dev-bastion ntpd[1329]: Soliciting pool server 173.230.144.109
+Jul 13 07:02:01 dev-bastion ntpd[1329]: Soliciting pool server 138.236.128.36
+Jul 13 07:02:01 dev-bastion CRON[11465]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:02:07 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:07 INFO [HealthCheck] HealthCheck reporting agent health.
+Jul 13 07:02:09 dev-bastion ntpd[1329]: Soliciting pool server 198.58.105.63
+Jul 13 07:02:26 dev-bastion ntpd[1329]: Soliciting pool server 108.61.73.243
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:32 INFO [MessagingDeliveryService] [Association] Next scheduled association is {
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "DocumentID": "",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "CreateDate": "2019-07-13T06:54:32.638127462Z",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "NextScheduledDate": "2019-07-13T07:02:32Z",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "Association": {
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "AssociationId": "c44873c2-10bf-49e5-a2ab-4870bda59581",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "AssociationVersion": "1",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "Checksum": "e94ca75752fdcdc9246f6db3441c59020b39a2c9d10050e6794b00c534081139",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "DetailedStatus": null,
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "DocumentVersion": "1",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "InstanceId": "i-0433e23e79b544bb7",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "LastExecutionDate": "2019-07-13T06:32:32Z",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "Name": "AWS-GatherSoftwareInventory",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "OutputLocation": null,
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "Parameters": {
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       "applications": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         "Enabled"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       ],
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       "awsComponents": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         "Enabled"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       ],
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       "customInventory": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         "Disabled"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       ],
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       "files": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         ""
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       ],
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       "instanceDetailedInformation": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         "Enabled"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       ],
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       "networkConfig": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         "Enabled"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       ],
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       "services": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         "Disabled"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       ],
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       "windowsRegistry": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         ""
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       ],
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       "windowsRoles": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         "Disabled"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       ],
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       "windowsUpdates": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         "Disabled"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       ]
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     },
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "ScheduleExpression": "rate(30 minutes)",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "Status": "Success",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "Targets": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       {
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         "Key": "InstanceIds",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         "Values": [
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:           "*"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:         ]
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:       }
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     ]
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   },
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ParsedExpression": {},
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "Document": "{\n    \"schemaVersion\": \"2.0\",\n    \"description\": \"Software Inventory Policy Document.\",\n    \"parameters\": {\n        \"applications\": {\n            \"type\": \"String\",\n            \"default\": \"Enabled\",\n            \"description\": \"(Optional) Collect data for installed applications.\",\n            \"allowedValues\": [\n                \"Enabled\",\n                \"Disabled\"\n            ]\n        },\n        \"awsComponents\": {\n            \"type\": \"String\",\n            \"default\": \"Enabled\",\n            \"description\": \"(Optional) Collect data for AWS Components like amazon-ssm-agent.\",\n            \"allowedValues\": [\n                \"Enabled\",\n                \"Disabled\"\n            ]\n        },\n        \"files\":{\n            \"type\":\"String\",\n            \"default\": \"\",\n            \"description\": \"\u003cp\u003e(Optional, requires SSMAgent version 2.2.64.0 and above)\u003cbr/\u003e\u003cbr/\u003eLinux example:\u003cbr/\u003e\u003cem\u003e[{\\\"Path\\\":\\\"/usr/bin\\\", \\\"Pattern\\\":[\\\"aws*\\\", \\\"*ssm*\\\"],\\\"Recursive\\\":false},{\\\"Path\\\":\\\"/var/log\\\", \\\"Pattern\\\":[\\\"amazon*.*\\\"], \\\"Recursive\\\":true, \\\"DirScanLimit\\\":1000}]\u003cbr/\u003e\u003c/em\u003e\u003cbr/\u003eWindows example:\u003cbr/\u003e\u003cem\u003e[{\\\"Path\\\":\\\"%PROGRAMFILES%\\\", \\\"Pattern\\\":[\\\"*.exe\\\"],\\\"Recursive\\\":true}]\u003c/em\u003e\u003cbr/\u003e\u003cbr/\u003eLearn More: http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-about.html#sysman-inventory-file-and-registry  \u003c/p\u003e\",\n            \"displayType\":\"textarea\"\n        },\n        \"networkConfig\": {\n            \"type\": \"String\",\n            \"default\": \"Enabled\",\n            \"description\": \"(Optional) Collect data for Network configurations.\",\n            \"allowedValues\": [\n                \"Enabled\",\n                \"Disabled\"\n            ]\n        },\n        \"windowsUpdates\": {\n
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     \"type\": \"String\",\n            \"default\": \"Enabled\",\n            \"description\": \"(Optional, Windows OS only) Collect data for all Windows Updates.\",\n            \"allowedValues\": [\n                \"Enabled\",\n                \"Disabled\"\n            ]\n        },\n        \"instanceDetailedInformation\": {\n            \"type\": \"String\",\n            \"default\": \"Enabled\",\n            \"description\": \"(Optional) Collect additional information about the instance, including the CPU model, speed, and the number of cores, to name a few.\",\n            \"allowedValues\": [\n                \"Enabled\",\n                \"Disabled\"\n            ]\n        },\n        \"services\": {\n            \"type\": \"String\",\n            \"default\": \"Enabled\",\n            \"description\": \"(Optional, Windows OS only, requires SSMAgent version 2.2.64.0 and above) Collect data for service configurations.\",\n            \"allowedValues\": [\n                \"Enabled\",\n                \"Disabled\"\n            ]\n        },\n        \"windowsRegistry\":{\n            \"type\":\"String\",\n            \"default\": \"\",\n            \"description\":\"\u003cp\u003e(Optional, Windows OS only, requires SSMAgent version 2.2.64.0 and above)\u003cbr/\u003e\u003cbr/\u003eExample:\u003cbr /\u003e[{\\\"Path\\\":\\\"HKEY_CURRENT_CONFIG\\\\System\\\",\\\"Recursive\\\":true},{\\\"Path\\\":\\\"HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Amazon\\\\MachineImage\\\", \\\"ValueNames\\\":[\\\"AMIName\\\"]}]\u003cbr/\u003e\u003cbr/\u003eLearn More: http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-about.html#sysman-inventory-file-and-registry \u003c/p\u003e\",\n            \"displayType\":\"textarea\"\n        },\n        \"windowsRoles\": {\n            \"type\": \"String\",\n            \"default\": \"Enabled\",\n            \"description\": \"(Optional, Windows OS only, requires SSMAgent version 2.2.64.0 and above) Collect data for Microsoft Windows role configurations.\",\n            \"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: allowedValues\": [\n                \"Enabled\",\n                \"Disabled\"\n            ]\n        },\n        \"customInventory\": {\n            \"type\": \"String\",\n            \"default\": \"Enabled\",\n            \"description\": \"(Optional) Collect data for custom inventory.\",\n            \"allowedValues\": [\n                \"Enabled\",\n                \"Disabled\"\n            ]\n        }\n    },\n    \"mainSteps\": [\n        {\n            \"action\": \"aws:softwareInventory\",\n            \"name\": \"collectSoftwareInventoryItems\",\n            \"inputs\": {\n                \"applications\": \"{{ applications }}\",\n                \"awsComponents\": \"{{ awsComponents }}\",\n                \"networkConfig\": \"{{ networkConfig }}\",\n                \"files\": \"{{ files }}\",\n                \"services\": \"{{ services }}\",\n                \"windowsRoles\": \"{{ windowsRoles }}\",\n                \"windowsRegistry\": \"{{ windowsRegistry}}\",\n                \"windowsUpdates\": \"{{ windowsUpdates }}\",\n                \"instanceDetailedInformation\": \"{{ instanceDetailedInformation }}\",\n                \"customInventory\": \"{{ customInventory }}\"\n            }\n        }\n    ]\n}\n",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "Errors": null
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: }
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:32 INFO  frequent collector is not enabled. changeDetectionFrequency: 0, len of gatherers: 0
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:32 INFO [MessagingDeliveryService] [Association] Updating association status {
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ErrorCode": "",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ExecutionDate": "2019-07-13T07:02:32Z",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ExecutionSummary": "Association is pending",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "OutputUrl": null,
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "Status": "Pending"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: }
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:32 INFO [MessagingDeliveryService] [Association] Update instance association status response content is {}
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:32 INFO [MessagingDeliveryService] [Association] [associationId=c44873c2-10bf-49e5-a2ab-4870bda59581] Executing association
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:32 INFO [MessagingDeliveryService] [Association] [associationId=c44873c2-10bf-49e5-a2ab-4870bda59581] Validating SSM parameters
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:32 INFO [MessagingDeliveryService] [Association] [associationId=c44873c2-10bf-49e5-a2ab-4870bda59581] Updating association status {
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ErrorCode": "",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ExecutionDate": "2019-07-13T07:02:32.019Z",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ExecutionSummary": "Executing association",
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "OutputUrl": null,
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "Status": "InProgress"
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: }
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:32 INFO [MessagingDeliveryService] [Association] [associationId=c44873c2-10bf-49e5-a2ab-4870bda59581] Update instance association status response content is {}
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:32 INFO [MessagingDeliveryService] [Association] [EngineProcessor] [OutOfProcExecuter] [c44873c2-10bf-49e5-a2ab-4870bda59581.2019-07-13T07-02-32.018Z] channel: c44873c2-10bf-49e5-a2ab-4870bda59581.2019-07-13T07-02-32.018Z not found, creating a new file channel...
+Jul 13 07:02:32 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:32 INFO [MessagingDeliveryService] [Association] [EngineProcessor] [OutOfProcExecuter] [c44873c2-10bf-49e5-a2ab-4870bda59581.2019-07-13T07-02-32.018Z] inter process communication started
+Jul 13 07:02:36 dev-bastion ntpd[1329]: Soliciting pool server 2001:67c:1560:8003::c7
+Jul 13 07:02:49 dev-bastion ntpd[1329]: Soliciting pool server 173.255.206.154
+Jul 13 07:02:56 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:56 INFO [MessagingDeliveryService] [Association] [EngineProcessor] [OutOfProcExecuter] [c44873c2-10bf-49e5-a2ab-4870bda59581.2019-07-13T07-02-32.018Z] requested terminate messaging worker, destroying the channel
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:56 INFO [MessagingDeliveryService] [Association] [EngineProcessor] [OutOfProcExecuter] [c44873c2-10bf-49e5-a2ab-4870bda59581.2019-07-13T07-02-32.018Z] channel /var/lib/amazon/ssm/i-0433e23e79b544bb7/channels/c44873c2-10bf-49e5-a2ab-4870bda59581.2019-07-13T07-02-32.018Z requested close
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:56 INFO [MessagingDeliveryService] [Association] [EngineProcessor] [OutOfProcExecuter] [c44873c2-10bf-49e5-a2ab-4870bda59581.2019-07-13T07-02-32.018Z] Executer closed
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:56 INFO [MessagingDeliveryService] [Association] [EngineProcessor] sending reply for plugin update: collectSoftwareInventoryItems
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:56 INFO [MessagingDeliveryService] [Association] [EngineProcessor] sending document: c44873c2-10bf-49e5-a2ab-4870bda59581.2019-07-13T07-02-32.018Z complete response
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:56 INFO [MessagingDeliveryService] [Association] update association status upon plugin $v completion%!(EXTRA string=collectSoftwareInventoryItems)
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:56 INFO [MessagingDeliveryService] [Association] [EngineProcessor] [OutOfProcExecuter] [c44873c2-10bf-49e5-a2ab-4870bda59581.2019-07-13T07-02-32.018Z] channel /var/lib/amazon/ssm/i-0433e23e79b544bb7/channels/c44873c2-10bf-49e5-a2ab-4870bda59581.2019-07-13T07-02-32.018Z closed
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:56 INFO [MessagingDeliveryService] [Association] Update instance association status with results {
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "collectSoftwareInventoryItems": {
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "status": "Success",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "code": 0,
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "name": "aws:softwareInventory",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "output": "Inventory policy has been successfully applied and collected inventory data has been uploaded to SSM",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "startDateTime": "2019-07-13T07:02:32.038Z",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "endDateTime": "2019-07-13T07:02:56.990Z",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "outputS3BucketName": "",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "outputS3KeyPrefix": "",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "stepName": "",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "standardOutput": "Inventory policy has been successfully applied and collected inventory data has been uploaded to SSM",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "standardError": ""
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   }
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: }
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:56 INFO [MessagingDeliveryService] [Association] Updating association status {
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ErrorCode": "",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ExecutionDate": "2019-07-13T07:02:56.996Z",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ExecutionSummary": "1 out of 1 plugin processed, 1 success, 0 failed, 0 timedout, 0 skipped. ",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "OutputUrl": null,
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "Status": "InProgress"
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: }
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:57 INFO [MessagingDeliveryService] [Association] Update instance association status response content is {}
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:57 INFO [MessagingDeliveryService] [Association] Update instance association status with results {
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "collectSoftwareInventoryItems": {
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "status": "Success",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "code": 0,
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "name": "aws:softwareInventory",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "output": "Inventory policy has been successfully applied and collected inventory data has been uploaded to SSM",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "startDateTime": "2019-07-13T07:02:32.038Z",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "endDateTime": "2019-07-13T07:02:56.990Z",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "outputS3BucketName": "",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "outputS3KeyPrefix": "",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "stepName": "",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "standardOutput": "Inventory policy has been successfully applied and collected inventory data has been uploaded to SSM",
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:     "standardError": ""
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   }
+Jul 13 07:02:57 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: }
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:57 INFO [MessagingDeliveryService] [Association] Updating association status {
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ErrorCode": "",
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ExecutionDate": "2019-07-13T07:02:57.005Z",
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "ExecutionSummary": "1 out of 1 plugin processed, 1 success, 0 failed, 0 timedout, 0 skipped. ",
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "OutputUrl": null,
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]:   "Status": "Success"
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: }
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:57 INFO [MessagingDeliveryService] [Association] [EngineProcessor] execution of aws.ssm.c44873c2-10bf-49e5-a2ab-4870bda59581.i-0433e23e79b544bb7 is over. Removing interimState from current folder
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:57 INFO [MessagingDeliveryService] [Association] Update instance association status response content is {}
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:57 INFO [MessagingDeliveryService] [Association] Based upon expression rate(30 minutes) and last execution date 2019-07-13T07-02-57.036Z, next scheduled date for association c44873c2-10bf-49e5-a2ab-4870bda59581 is 2019-07-13T07-32-57.036Z
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:57 INFO [MessagingDeliveryService] [Association] Scheduling association c44873c2-10bf-49e5-a2ab-4870bda59581, setting next ScheduledDate to 2019-07-13T07-32-57.036Z
+Jul 13 07:02:58 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:02:57 INFO [MessagingDeliveryService] [Association] Next association is scheduled at 2019-07-13 07:32:57.036885491 +0000 UTC, system will sleep for 29m59.999963412s
+Jul 13 07:03:01 dev-bastion CRON[12197]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:03:06 dev-bastion ntpd[1329]: Soliciting pool server 204.2.134.162
+Jul 13 07:03:14 dev-bastion ntpd[1329]: Soliciting pool server 184.105.182.7
+Jul 13 07:03:33 dev-bastion ntpd[1329]: Soliciting pool server 204.2.134.163
+Jul 13 07:03:43 dev-bastion ntpd[1329]: Soliciting pool server 91.189.89.198
+Jul 13 07:03:56 dev-bastion ntpd[1329]: Soliciting pool server 2001:19f0:6001:306f:ec4:7aff:fe8f:66ec
+Jul 13 07:04:01 dev-bastion CRON[12573]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:04:10 dev-bastion ntpd[1329]: Soliciting pool server 45.43.30.59
+Jul 13 07:04:20 dev-bastion ntpd[1329]: Soliciting pool server 23.131.160.7
+Jul 13 07:04:21 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:04:21 INFO [MessagingDeliveryService] [Association] Next association is scheduled at 2019-07-13 07:32:57.036885491 +0000 UTC, system will sleep for 28m35.749789154s
+Jul 13 07:04:37 dev-bastion ntpd[1329]: Soliciting pool server 45.77.78.241
+Jul 13 07:04:41 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:04:41 INFO [MessagingDeliveryService] [Association] Based upon expression rate(30 minutes) and last execution date 2019-07-13T07-02-57.000Z, next scheduled date for association c44873c2-10bf-49e5-a2ab-4870bda59581 is 2019-07-13T07-32-57.000Z
+Jul 13 07:04:41 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:04:41 INFO [MessagingDeliveryService] [Association] Scheduling association c44873c2-10bf-49e5-a2ab-4870bda59581, setting next ScheduledDate to 2019-07-13T07-32-57.000Z
+Jul 13 07:04:41 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:04:41 INFO [MessagingDeliveryService] [Association] Schedule manager refreshed with 1 associations, 0 new associations associated
+Jul 13 07:04:41 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:04:41 INFO [MessagingDeliveryService] [Association] Next association is scheduled at 2019-07-13 07:32:57 +0000 UTC, system will sleep for 28m15.925502953s
+Jul 13 07:04:48 dev-bastion ntpd[1329]: Soliciting pool server 91.189.94.4
+Jul 13 07:05:01 dev-bastion CRON[12585]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:05:02 dev-bastion ntpd[1329]: Soliciting pool server 2001:19f0:200:144b::1000
+Jul 13 07:05:17 dev-bastion ntpd[1329]: Soliciting pool server 64.79.100.196
+Jul 13 07:05:24 dev-bastion ntpd[1329]: Soliciting pool server 44.190.6.254
+Jul 13 07:05:41 dev-bastion ntpd[1329]: Soliciting pool server 107.155.79.108
+Jul 13 07:05:54 dev-bastion ntpd[1329]: Soliciting pool server 91.189.91.157
+Jul 13 07:06:01 dev-bastion CRON[12591]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:06:09 dev-bastion ntpd[1329]: Soliciting pool server 2001:470:5:bf4::14
+Jul 13 07:06:21 dev-bastion ntpd[1329]: Soliciting pool server 45.33.103.94
+Jul 13 07:06:28 dev-bastion ntpd[1329]: Soliciting pool server 72.46.53.234
+Jul 13 07:06:46 dev-bastion ntpd[1329]: Soliciting pool server 64.62.190.177
+Jul 13 07:06:58 dev-bastion ntpd[1329]: Soliciting pool server 91.189.89.199
+Jul 13 07:07:01 dev-bastion CRON[12597]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:07:07 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:07:07 INFO [HealthCheck] HealthCheck reporting agent health.
+Jul 13 07:07:16 dev-bastion ntpd[1329]: Soliciting pool server 2600:3c03::f03c:91ff:fe08:894c
+Jul 13 07:07:28 dev-bastion ntpd[1329]: Soliciting pool server 17.253.20.125
+Jul 13 07:07:32 dev-bastion ntpd[1329]: Soliciting pool server 208.79.89.249
+Jul 13 07:07:52 dev-bastion ntpd[1329]: Soliciting pool server 172.98.77.203
+Jul 13 07:08:01 dev-bastion CRON[12604]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:08:04 dev-bastion ntpd[1329]: Soliciting pool server 2001:67c:1560:8003::c7
+Jul 13 07:08:21 dev-bastion ntpd[1329]: Soliciting pool server 107.155.79.108
+Jul 13 07:08:33 dev-bastion ntpd[1329]: Soliciting pool server 173.255.206.154
+Jul 13 07:08:37 dev-bastion ntpd[1329]: Soliciting pool server 198.169.208.142
+Jul 13 07:08:56 dev-bastion ntpd[1329]: Soliciting pool server 216.229.0.50
+Jul 13 07:09:01 dev-bastion CRON[12610]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:09:11 dev-bastion ntpd[1329]: Soliciting pool server 2001:67c:1560:8003::c8
+Jul 13 07:09:21 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:09:21 INFO [MessagingDeliveryService] [Association] Next association is scheduled at 2019-07-13 07:32:57 +0000 UTC, system will sleep for 23m35.712975035s
+Jul 13 07:09:28 dev-bastion ntpd[1329]: Soliciting pool server 24.247.15.53
+Jul 13 07:09:38 dev-bastion ntpd[1329]: Soliciting pool server 204.11.201.10
+Jul 13 07:09:41 dev-bastion ntpd[1329]: Soliciting pool server 74.117.214.3
+Jul 13 07:10:00 dev-bastion ntpd[1329]: Soliciting pool server 108.61.56.35
+Jul 13 07:10:01 dev-bastion CRON[12622]: (root) CMD (/opt/iam/import_users.sh | logger -t import-users)
+Jul 13 07:10:01 dev-bastion CRON[12625]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:10:01 dev-bastion import-users: [07:10:01] configure_groups: Configuring groups for dev.
+Jul 13 07:10:01 dev-bastion import-users: [07:10:01] configure_groups: Syncronizing groups for jump.dev
+Jul 13 07:10:01 dev-bastion import-users: [07:10:01] configure_groups: Setting permissions for group dev
+Jul 13 07:10:01 dev-bastion import-users: [07:10:01] configure_groups: Setting permissions for /var/canva
+Jul 13 07:10:05 dev-bastion import-users: [07:10:05] import_users: Importing IAM group bastion with users: adam adam.e ahmed alejandro alessandro alex alexander alex.z alvi andrei.t andres andrew.l andrew.t andy angus anna.a annie anthony anton.e anton.s arnold.a arran arthur artur ashwanth ashwin belen.g bella benjamin.f benjamin.lea benji ben.m ben.sejas ben.t brady brendan brendan.annable bryce caly carl charles chester chris.chen chris.g christian christopher chuxin connor cuong daniel.m danju darren dave dave.d davey david davidguan declan delan denis.t desiree.s dmitry dmitry.v dominique eric eugene fraser gabriela garwah george.crabtree gerald gidon glen greg gustavo guy.n hamish.durkin han hansel henry huan igor irene jacob jade james.browning jessica.e jim jin joanne john jon jonathan jonathon jordan joscha jose josh.a josh.batchelor josh.l joshua.f judd karen katia kaveh ken.t kevin kevin.d kha kim.l kirk.f kosta krishna kris.w lawrence.law lee.p liji lily llewellyn lorena luisma luke luke.l mansour marc ma
+Jul 13 07:10:05 dev-bastion import-users: rco.lacava mark.p martin martin.l matt.c max michael.f michael.kendra michael.pearson michael.s mike mikhail miles mindaugas minh mitchell modrzew moe mudassir natalia neil nic.b nick nick.h nic.l nik nikola nissa norman oleg oleg.p owen.b owen.callanan patrick.r paul paul.b paul.bogg paul.s paul.t paul.thompson paulwyn pavel payton phuong qing quang ranie raunaq raz reynaldo richard.guan robbie robert roman.a ross ruoran saffat sam.c sam.killin sam.parkinson sam.w sasha saxon seb seb.r sergey sergey.g sharon sijie sinatra spirit stanislav.s stephan.schwiebert stephen steven stewart sughosh sylvain.b takashi theeban thibaut tim toby toby.s tomas tomasz tristan umran uri valerie verity vika vikrant vilius vincey vlad wade wei weng will will.r xavier xidorn yaseen yiwei yu yuliia zahra zcharles zehua zoe
+Jul 13 07:10:05 dev-bastion import-users: brendan ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:10:05 dev-bastion import-users: lee.p ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:10:05 dev-bastion import-users: mindaugas ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:10:05 dev-bastion import-users: moe ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:10:06 dev-bastion import-users: seb ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:10:06 dev-bastion import-users: wei ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:10:06 dev-bastion import-users: zcharles ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user adam to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user adam.e to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user ahmed to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user alejandro to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user alessandro to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user alex to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user alexander to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user alex.z to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user alvi to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user andrei.t to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user andres to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user andrew.l to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user andrew.t to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user andy to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user angus to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user anna.a to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user annie to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user anthony to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user anton.e to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user anton.s to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user arnold.a to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user arran to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user arthur to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user artur to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user ashwanth to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user ashwin to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user belen.g to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user bella to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user benjamin.f to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user benjamin.lea to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user benji to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user ben.m to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user ben.sejas to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user ben.t to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user brady to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user brendan to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user brendan.annable to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user bryce to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user caly to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user carl to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user charles to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user chester to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user chris.chen to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user chris.g to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user christian to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user christopher to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user chuxin to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user connor to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user cuong to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user daniel.m to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user danju to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user darren to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user dave to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user dave.d to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user davey to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user david to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user davidguan to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user declan to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user delan to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user denis.t to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user desiree.s to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user dmitry to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user dmitry.v to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user dominique to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user eric to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user eugene to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user fraser to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user gabriela to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user garwah to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user george.crabtree to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user gerald to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user gidon to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user glen to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user greg to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user gustavo to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user guy.n to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user hamish.durkin to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user han to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user hansel to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user henry to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user huan to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user igor to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user irene to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user jacob to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user jade to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user james.browning to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user jessica.e to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user jim to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user jin to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user joanne to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user john to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user jon to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user jonathan to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user jonathon to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user jordan to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user joscha to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user jose to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user josh.a to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user josh.batchelor to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user josh.l to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user joshua.f to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user judd to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user karen to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user katia to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user kaveh to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user ken.t to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user kevin to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user kevin.d to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user kha to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user kim.l to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user kirk.f to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user kosta to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user krishna to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user kris.w to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user lawrence.law to group bastion
+Jul 13 07:10:06 dev-bastion import-users: [07:10:06] import_users: Adding user lee.p to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user liji to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user lily to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user llewellyn to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user lorena to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user luisma to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user luke to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user luke.l to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user mansour to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user marc to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user marco.lacava to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user mark.p to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user martin to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user martin.l to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user matt.c to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user max to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user michael.f to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user michael.kendra to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user michael.pearson to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user michael.s to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user mike to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user mikhail to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user miles to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user mindaugas to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user minh to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user mitchell to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user modrzew to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user moe to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user mudassir to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user natalia to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user neil to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user nic.b to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user nick to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user nick.h to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user nic.l to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user nik to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user nikola to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user nissa to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user norman to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user oleg to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user oleg.p to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user owen.b to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user owen.callanan to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user patrick.r to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user paul to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user paul.b to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user paul.bogg to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user paul.s to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user paul.t to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user paul.thompson to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user paulwyn to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user pavel to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user payton to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user phuong to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user qing to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user quang to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user ranie to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user raunaq to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user raz to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user reynaldo to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user richard.guan to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user robbie to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user robert to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user roman.a to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user ross to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user ruoran to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user saffat to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sam.c to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sam.killin to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sam.parkinson to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sam.w to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sasha to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user saxon to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user seb to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user seb.r to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sergey to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sergey.g to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sharon to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sijie to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sinatra to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user spirit to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user stanislav.s to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user stephan.schwiebert to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user stephen to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user steven to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user stewart to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sughosh to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user sylvain.b to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user takashi to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user theeban to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user thibaut to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user tim to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user toby to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user toby.s to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user tomas to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user tomasz to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user tristan to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user umran to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user uri to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user valerie to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user verity to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user vika to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user vikrant to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user vilius to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user vincey to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user vlad to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user wade to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user wei to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user weng to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user will to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user will.r to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user xavier to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user xidorn to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user yaseen to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user yiwei to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user yu to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user yuliia to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user zahra to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user zcharles to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user zehua to group bastion
+Jul 13 07:10:07 dev-bastion import-users: [07:10:07] import_users: Adding user zoe to group bastion
+Jul 13 07:10:18 dev-bastion ntpd[1329]: Soliciting pool server 91.189.94.4
+Jul 13 07:10:34 dev-bastion ntpd[1329]: Soliciting pool server 129.250.35.250
+Jul 13 07:10:44 dev-bastion ntpd[1329]: Soliciting pool server 108.61.73.243
+Jul 13 07:10:45 dev-bastion ntpd[1329]: Soliciting pool server 108.61.73.244
+Jul 13 07:11:01 dev-bastion CRON[16334]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:11:04 dev-bastion ntpd[1329]: Soliciting pool server 204.11.201.10
+Jul 13 07:11:25 dev-bastion ntpd[1329]: Soliciting pool server 91.189.91.157
+Jul 13 07:11:38 dev-bastion ntpd[1329]: Soliciting pool server 216.229.0.50
+Jul 13 07:11:51 dev-bastion ntpd[1329]: Soliciting pool server 204.11.201.12
+Jul 13 07:11:51 dev-bastion ntpd[1329]: Soliciting pool server 44.190.6.254
+Jul 13 07:12:01 dev-bastion CRON[16340]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:12:07 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:12:07 INFO [HealthCheck] HealthCheck reporting agent health.
+Jul 13 07:12:09 dev-bastion ntpd[1329]: Soliciting pool server 69.89.207.199
+Jul 13 07:12:31 dev-bastion ntpd[1329]: Soliciting pool server 91.189.89.199
+Jul 13 07:12:44 dev-bastion ntpd[1329]: Soliciting pool server 2600:3c02::f03c:91ff:fe84:3cb5
+Jul 13 07:12:57 dev-bastion ntpd[1329]: Soliciting pool server 38.229.71.1
+Jul 13 07:12:57 dev-bastion ntpd[1329]: Soliciting pool server 50.116.52.97
+Jul 13 07:13:01 dev-bastion CRON[16347]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:13:13 dev-bastion ntpd[1329]: Soliciting pool server 50.116.52.97
+Jul 13 07:13:38 dev-bastion ntpd[1329]: Soliciting pool server 91.189.89.198
+Jul 13 07:13:48 dev-bastion ntpd[1329]: Soliciting pool server 2620:138:5000:0:5054:ff:fe89:6673
+Jul 13 07:14:01 dev-bastion CRON[16353]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:14:01 dev-bastion ntpd[1329]: Soliciting pool server 72.5.72.15
+Jul 13 07:14:01 dev-bastion ntpd[1329]: Soliciting pool server 74.117.214.3
+Jul 13 07:14:19 dev-bastion ntpd[1329]: Soliciting pool server 172.98.193.44
+Jul 13 07:14:21 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:14:21 INFO [MessagingDeliveryService] [Association] Next association is scheduled at 2019-07-13 07:32:57 +0000 UTC, system will sleep for 18m35.712975532s
+Jul 13 07:14:21 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:14:21 INFO [LongRunningPluginsManager] There are no long running plugins currently getting executed - skipping their healthcheck
+Jul 13 07:14:34 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:14:34 INFO [MessagingDeliveryService] [Association] Based upon expression rate(30 minutes) and last execution date 2019-07-13T07-02-57.000Z, next scheduled date for association c44873c2-10bf-49e5-a2ab-4870bda59581 is 2019-07-13T07-32-57.000Z
+Jul 13 07:14:34 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:14:34 INFO [MessagingDeliveryService] [Association] Scheduling association c44873c2-10bf-49e5-a2ab-4870bda59581, setting next ScheduledDate to 2019-07-13T07-32-57.000Z
+Jul 13 07:14:35 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:14:34 INFO [MessagingDeliveryService] [Association] Schedule manager refreshed with 1 associations, 0 new associations associated
+Jul 13 07:14:35 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:14:34 INFO [MessagingDeliveryService] [Association] Next association is scheduled at 2019-07-13 07:32:57 +0000 UTC, system will sleep for 18m22.184250435s
+Jul 13 07:14:45 dev-bastion ntpd[1329]: Soliciting pool server 2001:67c:1560:8003::c8
+Jul 13 07:14:55 dev-bastion ntpd[1329]: Soliciting pool server 2001:559:2be:3::1001
+Jul 13 07:15:01 dev-bastion CRON[16364]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:15:07 dev-bastion ntpd[1329]: Soliciting pool server 204.2.134.164
+Jul 13 07:15:07 dev-bastion ntpd[1329]: Soliciting pool server 142.147.92.5
+Jul 13 07:15:25 dev-bastion ntpd[1329]: Soliciting pool server 206.55.191.142
+Jul 13 07:15:51 dev-bastion ntpd[1329]: Soliciting pool server 2001:67c:1560:8003::c7
+Jul 13 07:16:00 dev-bastion ntpd[1329]: Soliciting pool server 2001:19f0:5:4030::1
+Jul 13 07:16:01 dev-bastion CRON[16370]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:16:11 dev-bastion ntpd[1329]: Soliciting pool server 199.223.248.100
+Jul 13 07:16:11 dev-bastion ntpd[1329]: Soliciting pool server 185.198.26.172
+Jul 13 07:16:31 dev-bastion ntpd[1329]: Soliciting pool server 64.79.100.196
+Jul 13 07:16:56 dev-bastion ntpd[1329]: Soliciting pool server 91.189.89.199
+Jul 13 07:17:01 dev-bastion CRON[16377]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jul 13 07:17:01 dev-bastion CRON[16379]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:17:05 dev-bastion ntpd[1329]: Soliciting pool server 216.229.0.50
+Jul 13 07:17:07 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:17:07 INFO [HealthCheck] HealthCheck reporting agent health.
+Jul 13 07:17:15 dev-bastion ntpd[1329]: Soliciting pool server 45.33.84.208
+Jul 13 07:17:17 dev-bastion ntpd[1329]: Soliciting pool server 173.255.215.209
+Jul 13 07:17:35 dev-bastion ntpd[1329]: Soliciting pool server 216.229.0.49
+Jul 13 07:18:01 dev-bastion CRON[16386]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:18:03 dev-bastion ntpd[1329]: Soliciting pool server 91.189.94.4
+Jul 13 07:18:12 dev-bastion ntpd[1329]: Soliciting pool server 63.211.239.58
+Jul 13 07:18:20 dev-bastion ntpd[1329]: Soliciting pool server 146.71.77.36
+Jul 13 07:18:23 dev-bastion ntpd[1329]: Soliciting pool server 204.11.201.10
+Jul 13 07:18:39 dev-bastion ntpd[1329]: Soliciting pool server 208.113.157.157
+Jul 13 07:19:01 dev-bastion CRON[16392]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:19:07 dev-bastion ntpd[1329]: Soliciting pool server 91.189.89.198
+Jul 13 07:19:16 dev-bastion ntpd[1329]: Soliciting pool server 184.105.182.15
+Jul 13 07:19:21 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 07:19:21 INFO [MessagingDeliveryService] [Association] Next association is scheduled at 2019-07-13 07:32:57 +0000 UTC, system will sleep for 13m35.712988038s
+Jul 13 07:19:26 dev-bastion ntpd[1329]: Soliciting pool server 50.116.6.123
+Jul 13 07:19:30 dev-bastion ntpd[1329]: Soliciting pool server 64.62.190.177
+Jul 13 07:19:44 dev-bastion ntpd[1329]: Soliciting pool server 159.203.158.197
+Jul 13 07:20:01 dev-bastion CRON[16404]: (root) CMD (/opt/iam/import_users.sh | logger -t import-users)
+Jul 13 07:20:01 dev-bastion CRON[16407]: (root) CMD (/var/awslogs/bin/awslogs-nanny.sh > /dev/null 2>&1)
+Jul 13 07:20:02 dev-bastion import-users: [07:20:02] configure_groups: Configuring groups for dev.
+Jul 13 07:20:02 dev-bastion import-users: [07:20:02] configure_groups: Syncronizing groups for jump.dev
+Jul 13 07:20:02 dev-bastion import-users: [07:20:02] configure_groups: Setting permissions for group dev
+Jul 13 07:20:02 dev-bastion import-users: [07:20:02] configure_groups: Setting permissions for /var/canva
+Jul 13 07:20:05 dev-bastion import-users: [07:20:05] import_users: Importing IAM group bastion with users: adam adam.e ahmed alejandro alessandro alex alexander alex.z alvi andrei.t andres andrew.l andrew.t andy angus anna.a annie anthony anton.e anton.s arnold.a arran arthur artur ashwanth ashwin belen.g bella benjamin.f benjamin.lea benji ben.m ben.sejas ben.t brady brendan brendan.annable bryce caly carl charles chester chris.chen chris.g christian christopher chuxin connor cuong daniel.m danju darren dave dave.d davey david davidguan declan delan denis.t desiree.s dmitry dmitry.v dominique eric eugene fraser gabriela garwah george.crabtree gerald gidon glen greg gustavo guy.n hamish.durkin han hansel henry huan igor irene jacob jade james.browning jessica.e jim jin joanne john jon jonathan jonathon jordan joscha jose josh.a josh.batchelor josh.l joshua.f judd karen katia kaveh ken.t kevin kevin.d kha kim.l kirk.f kosta krishna kris.w lawrence.law lee.p liji lily llewellyn lorena luisma luke luke.l mansour marc ma
+Jul 13 07:20:05 dev-bastion import-users: rco.lacava mark.p martin martin.l matt.c max michael.f michael.kendra michael.pearson michael.s mike mikhail miles mindaugas minh mitchell modrzew moe mudassir natalia neil nic.b nick nick.h nic.l nik nikola nissa norman oleg oleg.p owen.b owen.callanan patrick.r paul paul.b paul.bogg paul.s paul.t paul.thompson paulwyn pavel payton phuong qing quang ranie raunaq raz reynaldo richard.guan robbie robert roman.a ross ruoran saffat sam.c sam.killin sam.parkinson sam.w sasha saxon seb seb.r sergey sergey.g sharon sijie sinatra spirit stanislav.s stephan.schwiebert stephen steven stewart sughosh sylvain.b takashi theeban thibaut tim toby toby.s tomas tomasz tristan umran uri valerie verity vika vikrant vilius vincey vlad wade wei weng will will.r xavier xidorn yaseen yiwei yu yuliia zahra zcharles zehua zoe
+Jul 13 07:20:05 dev-bastion import-users: brendan ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:20:06 dev-bastion import-users: lee.p ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:20:06 dev-bastion import-users: mindaugas ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:20:06 dev-bastion import-users: moe ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:20:06 dev-bastion import-users: seb ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:20:06 dev-bastion import-users: wei ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:20:07 dev-bastion import-users: zcharles ALL=(ALL:ALL) NOPASSWD:ALL
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user adam to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user adam.e to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user ahmed to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user alejandro to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user alessandro to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user alex to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user alexander to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user alex.z to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user alvi to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user andrei.t to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user andres to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user andrew.l to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user andrew.t to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user andy to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user angus to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user anna.a to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user annie to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user anthony to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user anton.e to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user anton.s to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user arnold.a to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user arran to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user arthur to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user artur to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user ashwanth to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user ashwin to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user belen.g to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user bella to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user benjamin.f to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user benjamin.lea to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user benji to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user ben.m to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user ben.sejas to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user ben.t to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user brady to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user brendan to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user brendan.annable to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user bryce to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user caly to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user carl to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user charles to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user chester to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user chris.chen to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user chris.g to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user christian to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user christopher to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user chuxin to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user connor to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user cuong to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user daniel.m to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user danju to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user darren to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user dave to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user dave.d to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user davey to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user david to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user davidguan to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user declan to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user delan to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user denis.t to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user desiree.s to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user dmitry to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user dmitry.v to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user dominique to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user eric to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user eugene to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user fraser to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user gabriela to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user garwah to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user george.crabtree to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user gerald to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user gidon to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user glen to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user greg to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user gustavo to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user guy.n to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user hamish.durkin to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user han to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user hansel to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user henry to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user huan to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user igor to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user irene to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user jacob to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user jade to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user james.browning to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user jessica.e to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user jim to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user jin to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user joanne to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user john to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user jon to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user jonathan to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user jonathon to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user jordan to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user joscha to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user jose to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user josh.a to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user josh.batchelor to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user josh.l to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user joshua.f to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user judd to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user karen to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user katia to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user kaveh to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user ken.t to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user kevin to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user kevin.d to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user kha to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user kim.l to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user kirk.f to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user kosta to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user krishna to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user kris.w to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user lawrence.law to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user lee.p to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user liji to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user lily to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user llewellyn to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user lorena to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user luisma to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user luke to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user luke.l to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user mansour to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user marc to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user marco.lacava to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user mark.p to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user martin to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user martin.l to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user matt.c to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user max to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user michael.f to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user michael.kendra to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user michael.pearson to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user michael.s to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user mike to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user mikhail to group bastion
+Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user miles to group bastion
+root@dev-bastion:/var/log#
