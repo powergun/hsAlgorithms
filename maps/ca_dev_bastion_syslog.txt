@@ -1,4 +1,3 @@
- at 2019-07-13 07:02:32 +0000 UTC, system will sleep for 3m10.712896592s
 Jul 13 06:59:21 dev-bastion amazon-ssm-agent.amazon-ssm-agent[30093]: 2019-07-13 06:59:21 INFO [LongRunningPluginsManager] There are no long running plugins currently getting executed - skipping their healthcheck
 Jul 13 06:59:21 dev-bastion ntpd[1329]: Soliciting pool server 91.189.91.157
 Jul 13 06:59:32 dev-bastion ntpd[1329]: Soliciting pool server 69.164.203.231
@@ -931,4 +930,3 @@ Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user m
 Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user mike to group bastion
 Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user mikhail to group bastion
 Jul 13 07:20:07 dev-bastion import-users: [07:20:07] import_users: Adding user miles to group bastion
-root@dev-bastion:/var/log#
