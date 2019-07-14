@@ -37,6 +37,7 @@
 -- https://en.wikipedia.org/wiki/Leftist_tree
 
 data Queue a = Empty
+                     --  .. node value
              | Queue Int a (Queue a) (Queue a)
              --      ^^^ rank info
              deriving (Show)
@@ -46,10 +47,78 @@ mergeQs Empty q = q
 mergeQs q Empty = q
 mergeQs left@(Queue _ lv ll lr) right@(Queue _ rv rl rr) =
   if lv <= rv then
-    swipe lv ll (mergeQs lr right)
+    checkAndSwipe lv ll (mergeQs lr right)
   else 
-    swipe rv rl (mergeQs left rr)
+    checkAndSwipe rv rl (mergeQs left rr)
+
+-- MY NOTES:
+-- just a getter function; not log(n) computation, which is done
+-- at the post merge re-adjustment stage
+rank :: Queue a -> Int
+rank Empty = 0
+rank some@(Queue r _ _ _) = r
+
+-- L4141
+-- swipe function is to check the rank and swipe left and right 
+-- branches to obey the leftist property
+checkAndSwipe :: a -> Queue a -> Queue a -> Queue a
+checkAndSwipe v left right =
+  let lRank = rank left
+      rRank = rank right
+  in if lRank >= rRank
+     then
+       Queue (rRank + 1) v left right
+     else
+       Queue (lRank + 1) v right left
+
+emptyQ :: Queue a
+emptyQ = Empty
+
+singletonQ :: a -> Queue a
+singletonQ v = Queue 1 v Empty Empty
+
+insertQ :: Ord a => a -> Queue a -> Queue a
+insertQ v q =
+  mergeQs (singletonQ v) q
+
+insertAllQ :: Ord a => [a] -> Queue a -> Queue a
+insertAllQ [] q = q
+insertAllQ (x:xs) q =
+  let q' = insertQ x q
+  in insertAllQ xs q'
+
+minimumQ :: Queue a -> Maybe a
+minimumQ Empty = Nothing
+minimumQ (Queue _ v _ _) = Just v
+
+popQ :: Ord a => Queue a -> Maybe (Queue a, a)
+popQ Empty = Nothing
+popQ (Queue _ v l r) = 
+  let q = mergeQs l r
+  in Just (q, v)
+
+popNQ :: Ord a => Queue a -> Int -> Maybe (Queue a, a)
+popNQ Empty _ = Nothing
+popNQ q@(Queue _ v _ _) 0 = Just (q, v)
+popNQ q@(Queue _ v l r) ntimes =
+  let Just (q', _) = popQ q
+  in popNQ q' (ntimes - 1)
+
+demoQueueCreation :: IO ()
+demoQueueCreation = do
+  print
+    "//////// demo queue creation /////////////////////////////"
+  let q = insertAllQ [3, 14, 1, 59, 2, 6, -535, 8, 97] (emptyQ)
+      Just min_ = minimumQ q
+      Just (q', min_') = popQ q
+      Just (q'', min_'') = popNQ q 5
+  print q
+  print min_
+  print $ min_ == min_'
+  print $ minimumQ q'
+  print min_''
+  print q''
 
 main :: IO ()
 main = do
-  print 1
+  demoQueueCreation
