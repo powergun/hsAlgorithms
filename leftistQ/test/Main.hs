@@ -33,6 +33,12 @@ qFromList xs =
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 -- then we can test a function a -> prop
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-- This helps us test our functions such as 
+-- verifyLeftist :: Queue a -> Bool
+-- Bool is a testable property thus our function also becomes
+-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-- testable
+-- ^^^^^^^^
 instance (Arbitrary a, Ord a) => Arbitrary (Q.Queue a) where
   arbitrary = do
     aList <- listOf arbitrary
