@@ -14,6 +14,11 @@ qFromList :: Ord a => [a] -> Gen (Q.Queue a)
 qFromList xs =
   return (foldr Q.insertQ Q.emptyQ xs)
 
+-- in order to call quickCheck :: Container -> Bool
+-- it must implement the Arbitrary typeclass for the container 
+-- type
+-- No instance for (Arbitrary (Q.Queue Int))
+-- arising from a use of ‘quickCheck’
 instance (Arbitrary a, Ord a) => Arbitrary (Q.Queue a) where
   arbitrary = do
     aList <- listOf arbitrary
@@ -36,11 +41,21 @@ verifyLeftist q@(Q.Queue rnk v l r) =
     qRank (Q.Queue _ _ l r) =  1 + minimum [qRank l, qRank r]
 
 -- test the heap order property of the queue
-heapOrdered :: Ord a => Queue a -> Bool
-heapOrdered
+heapOrdered :: Ord a => Q.Queue a -> Bool
+heapOrdered Q.Empty = True
+heapOrdered (Q.Queue _ _ Q.Empty Q.Empty) = True
+heapOrdered (Q.Queue _ v Q.Empty r@(Q.Queue _ rv _ _)) =
+  and [ v <= rv, heapOrdered r ]
+heapOrdered (Q.Queue _ v l@(Q.Queue _ lv _ _) Q.Empty) =
+  and [ v <= lv, heapOrdered l ]
+heapOrdered (Q.Queue _ v l@(Q.Queue _ lv _ _) r@(Q.Queue _ rv _ _)) =
+  and [ v <= rv, v <= lv, heapOrdered l, heapOrdered r ]
 
 main :: IO ()
 main = do
   print 
     "//////// verify leftist property /////////////////////////"
   quickCheck (verifyLeftist :: Q.Queue Int -> Bool)
+  print
+    "//////// verify heap order property //////////////////////"
+  quickCheck (heapOrdered :: Q.Queue Int -> Bool)
