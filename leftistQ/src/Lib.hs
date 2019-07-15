@@ -1,6 +1,11 @@
-#!/usr/bin/env stack runghc
-
--- THIS HAS BEEN MOVED TO leftistQ / Lib
+module Lib
+    ( emptyQ
+    , popQ
+    , popNQ
+    , insertQ
+    , insertAllQ
+    , minimumQ
+    ) where
 
 -- haskell cookbook L4093
 -- many collections and data structures require binary tree as 
@@ -105,22 +110,3 @@ popNQ q@(Queue _ v _ _) 0 = Just (q, v)
 popNQ q@(Queue _ v l r) ntimes =
   let Just (q', _) = popQ q
   in popNQ q' (ntimes - 1)
-
-demoQueueCreation :: IO ()
-demoQueueCreation = do
-  print
-    "//////// demo queue creation /////////////////////////////"
-  let q = insertAllQ [3, 14, 1, 59, 2, 6, -535, 8, 97] (emptyQ)
-      Just min_ = minimumQ q
-      Just (q', min_') = popQ q
-      Just (q'', min_'') = popNQ q 5
-  print q
-  print min_
-  print $ min_ == min_'
-  print $ minimumQ q'
-  print min_''
-  print q''
-
-main :: IO ()
-main = do
-  demoQueueCreation
