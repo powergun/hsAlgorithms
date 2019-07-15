@@ -1,5 +1,6 @@
 module Lib
-    ( emptyQ
+    ( Queue(..)
+    , emptyQ
     , popQ
     , popNQ
     , insertQ
