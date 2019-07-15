@@ -22,15 +22,13 @@ data Tree a = Empty
             deriving (Show)
 
 instance Foldable Tree where
-  foldMap f empy = mempty
+  foldMap f Empty = mempty
   foldMap f (Tree left v right) = 
     (foldMap f left) `mappend` f v `mappend` (foldMap f right)
   foldr f x Empty = x
-  foldr f x (Tree left v right) = foldr_left 
-    where
-      foldr_right = foldr f x right
-      foldr_value = f v foldr_right
-      foldr_left = foldr f foldr_value left
+  foldr f x (Tree left v right) =
+    -- right, self, left
+    foldr f (f v (foldr f x right)) left 
 
 instance Functor Tree where
   fmap f Empty = Empty
@@ -40,7 +38,7 @@ instance Functor Tree where
 instance Traversable Tree where
   traverse f Empty = pure Empty
   traverse f (Tree left v right) = 
-    Tree <$> traverse f left <*> f v <*> traverse f right
+    Tree <$> (traverse f left) <*> (f v) <*> (traverse f right)
 
 sampleTree :: Tree Int
 sampleTree = 
@@ -59,12 +57,20 @@ sampleSum = foldr (+) 0
 sampleTraverse :: Tree Int -> [Tree String]
 sampleTraverse = traverse (\x -> [show x])
 
+nodeToStr :: Show a => Tree a -> String
+nodeToStr Empty = "."
+nodeToStr (Tree l v r) = show v
+
 main :: IO ()
 main = do
-  print imap
-  print $ ifold imap
-  print $ ifoldr imap
-  print $ itraverse imap
-  print $ sampleTree
-  print $ sampleSum sampleTree
-  print $ sampleTraverse sampleTree
+  -- print imap
+  -- print $ ifold imap
+  -- print $ ifoldr imap
+  -- print $ itraverse imap
+  -- print $ sampleTree
+  -- print $ sampleSum sampleTree
+  -- print $ sampleTraverse sampleTree
+
+  -- remember foldr starts with the right branch, then self,
+  -- then left branch
+  print $ foldr (\v vs -> vs ++ [v]) [] sampleTree
