@@ -14,11 +14,25 @@ qFromList :: Ord a => [a] -> Gen (Q.Queue a)
 qFromList xs =
   return (foldr Q.insertQ Q.emptyQ xs)
 
+-- MY NOTES
 -- in order to call quickCheck :: Container -> Bool
 -- it must implement the Arbitrary typeclass for the container 
 -- type
 -- No instance for (Arbitrary (Q.Queue Int))
 -- arising from a use of ‘quickCheck’
+-- L4261
+-- at the heart of QuickCheck is the class Arbitrary, which has 
+-- an arbitrary function to generate random instances of data 
+-- types
+-- class Testable prop where
+--   property :: prop -> Property
+-- instance [safe] (Arbitrary a, Show a, Testable prop) =>
+--   Testable (a -> prop)
+-- L4261
+-- if we have a Testable property and an Arbitrary instance of a
+-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-- then we can test a function a -> prop
+-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 instance (Arbitrary a, Ord a) => Arbitrary (Q.Queue a) where
   arbitrary = do
     aList <- listOf arbitrary
