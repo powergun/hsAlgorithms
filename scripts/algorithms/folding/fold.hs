@@ -28,3 +28,5 @@ main :: IO ()
 main = do
     demoFoldr
     demoFoldl
+
+    print $ foldr (+) 0 [3, 1, 4]

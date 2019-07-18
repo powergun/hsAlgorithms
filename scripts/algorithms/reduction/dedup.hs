@@ -3,6 +3,8 @@
 -- programming haskell L2714
 -- remove duplicated elements from a list
 
+-- Data.List / nub
+
 dedup :: Eq a => [a] -> [a]
 dedup [] = []
 dedup (x:xs) = x : filter (/= x) (dedup xs)
