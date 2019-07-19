@@ -30,10 +30,18 @@ demoZipWithFunction = do
     let funcs = [(* 2), (* 3), (* 5)]
     print $ zipWith (\func value -> func (value)) funcs [10, 20, 30]
 
+-- source
+-- https://wiki.haskell.org/Simple_Unix_tools
+demoAddLineNumber :: IO ()
+demoAddLineNumber = do
+  print $ zipWith f [1..] ["there", "is", "a", "cow"]
+  where
+    f n l = (show n) ++ l
+
 main :: IO ()
 main = do
     demoAdjacentPairs
     demoIsSorted
     demoWithIndex
     demoZipWithFunction
-    
+    demoAddLineNumber
