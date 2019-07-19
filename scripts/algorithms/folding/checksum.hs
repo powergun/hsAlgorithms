@@ -3,7 +3,7 @@
 -- source
 -- https://wiki.haskell.org/Simple_Unix_tools
 
-import Data.Char (ord)
+import           Data.Char (ord)
 
 -- cksum = foldl k 5381
 --   where
@@ -14,7 +14,7 @@ checksum lines =
   foldl k 5381 lines
   where
     k :: Int -> [Char] -> Int
-    k n line = 
+    k n line =
       foldl (\_sum c -> _sum * 33 + ord c) 0 line + n
 
 main :: IO ()
