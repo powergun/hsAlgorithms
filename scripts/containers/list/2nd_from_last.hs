@@ -1,5 +1,7 @@
 #!/usr/bin/env stack runghc
 
+import           Helpers (forM_, verify)
+
 -- source
 -- https://wiki.haskell.org/99_questions/Solutions/2
 
@@ -33,22 +35,16 @@ secondLast7 (x:y:rest) | length rest == 0 = Just x
                        | length rest >  0 = secondLast7 (y:rest)
 secondLast7 _ = Nothing
 
-verify :: ([Int] -> Maybe Int) -> IO ()
-verify f = do
-  assert Nothing $ f ([] :: [Int])
-  assert Nothing $ f [111]
-  assert (Just 5) $ f [1..6]
-  where
-    assert lhs rhs =
-      case (lhs == rhs) of
-        True  -> return ()
-        False -> error $ "fail: " ++ show lhs ++ " != " ++ show rhs
-
 main = do
-  verify secondLast1
-  verify secondLast2
-  verify secondLast3
-  verify secondLast4
-  verify secondLast5
-  verify secondLast6
-  verify secondLast7
+  let condidates = [ ([], Nothing)
+                   , ([1], Nothing)
+                   , ([1..9], Just 8) ]
+  forM_ [ secondLast1
+        , secondLast2
+        , secondLast3
+        , secondLast4
+        , secondLast5
+        , secondLast6
+        , secondLast7
+        ] $ \f ->
+    verify f condidates

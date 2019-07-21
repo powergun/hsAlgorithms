@@ -1,5 +1,7 @@
 #!/usr/bin/env stack runghc
 
+import           Helpers (forM_, verify)
+
 -- source
 -- https://wiki.haskell.org/99_questions/Solutions/1
 
@@ -43,21 +45,15 @@ last4 xs = Just (foldl1 (curry snd) xs)
 last5 [] = Nothing
 last5 xs = Just (xs !! ((length xs) - 1))
 
-verify :: ([Int] -> Maybe Int) -> IO ()
-verify f = do
-  assert Nothing $ f ([] :: [Int])
-  assert (Just 111) $ f [111]
-  assert (Just 6) $ f [1..6]
-  where
-    assert lhs rhs =
-      case (lhs == rhs) of
-        True  -> return ()
-        False -> error $ "fail: " ++ show lhs ++ " != " ++ show rhs
-
 main :: IO ()
 main = do
-  verify last1
-  verify last2
-  verify last3
-  verify last4
-  verify last5
+  let condidates = [ ([], Nothing)
+                   , ([111], Just 111)
+                   , ([1..9], Just 9) ]
+  forM_ [ last1
+        , last2
+        , last3
+        , last4
+        , last5
+        ] $ \f ->
+    verify f condidates
