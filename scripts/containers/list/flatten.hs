@@ -5,18 +5,18 @@
 
 import           Helpers (assert)
 
-data NestedList a = Elem a | List [NestedList a] deriving (Show, Eq)
+data NestedList ValueT = Elem a 
+                       | List [NestedList a] 
+                  deriving (Show, Eq)
 
-flat1 []     = []
-flat1 [x]    = [x]
-flat1 (x:xs) = concatMap flat1 xs
+flatten :: NestedList a -> [a]
+flatten (Elem x) = [x]
+flatten (List x) = concatMap flatten x
 
 verify f =
-  assert [] $ f []
-  assert [1] $ f [1]
-  assert [1, 2] $ f [1, [2]]
-  assert [1, 2, 3, 4, 5] $ f [1, [2, [3, [4, [5]]]]]
+  assert [5] $ f (Elem 5)
+  -- assert ([1,2,3,4,5] :: [Int]) $ f (List [Elem 1, List [Elem 2, List [Elem 3, Elem 4], Elem 5]])
 
 main :: IO ()
 main = do
-  print 1
+  verify flatten
