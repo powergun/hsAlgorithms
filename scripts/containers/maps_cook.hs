@@ -18,6 +18,8 @@ demoUpdateWithKey = do
 
 demoUnion :: IO ()
 demoUnion = do
+  print
+    "//////// demo union (including union-with) ///////////////"
   let mp1 = M.fromList [("th", 1), ("er", 2)]
       mp2 = M.fromList [("th", 30), ("er", 333)]
   -- not updating existing values
