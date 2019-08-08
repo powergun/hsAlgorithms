@@ -1,6 +1,6 @@
 #!/usr/bin/env stack runghc
 
-import Data.Bits
+import           Data.Bits
 
 -- real world haskell P/162
 -- see also the table P/186
@@ -17,7 +17,7 @@ demoAnd = do
 demoHighLowPartition :: Int -> IO ()
 demoHighLowPartition n = do
   print "//// demo partition high and low bits"
-  print $ (show a ++ show b)
+  print (show a ++ show b)
   where
     b = n .&. (0xFFFF :: Int)
     a = (n .&. (0xFF0000 :: Int)) `shiftR` (16 :: Int)

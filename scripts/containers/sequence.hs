@@ -1,12 +1,12 @@
 #!/usr/bin/env stack runghc
 
--- TODO: read into Data.Sequence container
+-- http://hackage.haskell.org/package/containers-0.6.2.1/docs/Data-Sequence.html
 
 -- real world haskell P/362
--- Data.Sequence module defines a Seq container type that gives 
+-- Data.Sequence module defines a Seq container type that gives
 -- good performance for a wider varity of operations
-import qualified Data.Sequence as Seq
 import qualified Data.Foldable as Foldable
+import qualified Data.Sequence as Seq
 
 demoSeqCreation :: IO ()
 demoSeqCreation = do
@@ -15,7 +15,7 @@ demoSeqCreation = do
       one = Seq.singleton 1
       afew = Seq.fromList [0..4]
       -- P/363
-      -- both adding on the left and adding on the right are 
+      -- both adding on the left and adding on the right are
       -- constant-time operations
       prepended = -1 Seq.<| one
       appended = one Seq.|> 33
@@ -38,12 +38,34 @@ demoCreateListFromSeq = do
   -- Data.Foldable module
   print $ Foldable.foldl' (\r n -> n * 3 + r) 0 (Seq.fromList [-4..6])
 
--- Lists are simpler and have less overhead, and so quite often 
+-- Lists are simpler and have less overhead, and so quite often
 -- they are good enough for the task at hand
 -- they are also well suited to a lazy setting, whereas Seq
 -- does not well
+
+demoSequenceConcat :: IO ()
+demoSequenceConcat = do
+  let one = Seq.singleton "1"
+      two = Seq.fromList ["a", "b"]
+  print (one Seq.>< two)
+
+demoFromFunction :: IO ()
+demoFromFunction = do
+  let gen _ = "iddqd" -- ["iddqd","iddqd","iddqd","iddqd"]
+  print (Seq.fromFunction 4 gen)
+
+demoReplication :: IO ()
+demoReplication = do
+  print (Seq.replicate 4 "iddqd")
+  print (Seq.replicateA 4 (map (+ 1)) [1, 2, 3])
+  -- [[2,3,4],[2,3,4],[2,3,4],[2,3,4]]
+  print (Seq.replicateA 4 (+ 1) 3) -- [4,4,4,4]
+  print (Seq.cycleTaking 5 (Seq.fromList [1, 2, 3]))
 
 main :: IO ()
 main = do
   demoSeqCreation
   demoCreateListFromSeq
+  demoSequenceConcat
+  demoFromFunction
+  demoReplication
