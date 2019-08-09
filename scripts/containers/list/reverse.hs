@@ -8,20 +8,20 @@ import           Helpers (assert)
 -- this is the wasteful verison
 rev1 :: [a] -> [a]
 rev1 []     = []
-rev1 (x:xs) = (rev1 xs) ++ [x]
+rev1 (x:xs) = rev1 xs ++ [x]
 
 -- use accumulator idiom
 rev2 :: [a] -> [a]
 rev2 [] = []
-rev2 xs = rev' xs [] where rev' [] out_     = out_
-                           rev' (x:xs) out_ = rev' xs (x:out_)
+rev2 xs = rev' xs [] where rev' xs out_ = foldl (flip (:)) out_ xs
 
--- TODO: ???
 rev3 :: [a] -> [a]
-rev3 xs = foldr (\x fId empty -> fId (x : empty)) id xs []
+-- rev3 xs = foldr (\x fId empty -> fId (x : empty)) id xs []
+-- foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b
+rev3 = foldr (\x acc -> acc ++ [x]) []
 
 rev4 :: [a] -> [a]
-rev4 = foldl (\a x -> x:a) []
+rev4 = foldl (flip (:)) []
 
 verify f = do
   assert [] $ f []

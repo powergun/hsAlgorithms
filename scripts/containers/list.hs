@@ -2,8 +2,8 @@
 
 {-# LANGUAGE ScopedTypeVariables #-}
 
-import Data.List
-import Control.Exception (SomeException, catch)
+import           Control.Exception (SomeException, catch)
+import           Data.List
 
 l0 :: [Int]
 l0 = [1, 2, 3, 4, 5]
@@ -16,9 +16,9 @@ l3 :: [Int]
 l3 = [1..]
 l4 :: [String]
 l4 = ["aaa", "bbb", "ccc", "ddd"]
-l5 :: [Char]
+l5 :: String
 l5 = ['a', 'b', 'c', 'd']
-l6 :: [Char]
+l6 :: String
 l6 = "abcd"
 
 type Grid = [String]
@@ -30,7 +30,7 @@ grid = [ "xxxxx"
        ]
 
 outputGrid :: Grid -> String
-outputGrid grid = intercalate "\n" grid
+outputGrid = intercalate "\n"
 
 skew :: Grid -> Grid
 -- for recursive algorithms, it is important to always define the
@@ -74,7 +74,7 @@ demoGetElement = do
   print "//// demo get list element"
   let l = [1, 2, 3]
   print $ l !! 2
-  catch (print $ l !! 99) 
+  catch (print $ l !! 99)
         (\(e :: SomeException) -> print e) -- index too large exception
 
 main :: IO ()
