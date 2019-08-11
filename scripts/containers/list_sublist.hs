@@ -7,4 +7,5 @@
 
 main :: IO ()
 main = do
-  print 1
+  print $ takeWhile (/= 10) [1..]
+  print $ dropWhile (< 10) [1..12]

@@ -1,14 +1,10 @@
 #!/usr/bin/env stack runghc
 
--- TODO: real world haskell P/118 - P/139
--- TODO: absorb and document list manip techniques
--- TODO: read Data.List hackage page (very nice layout and structure)
+-- real world haskell P/118 - P/139
 -- http://hackage.haskell.org/package/base-4.12.0.0/docs/Data-List.html
 
 import           Control.Monad (forM_)
 import           Data.List
-
--- TODO: list diff function \\
 
 -- intersperse :: a -> [a] -> [a]
 -- The intersperse function takes an element and a list
