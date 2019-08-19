@@ -1,0 +1,6 @@
+
+# restructure algorithms
+
+use programming haskell L5772 as the basis, re-categorise the 
+algorithms (making sure that foldable-related algorithsm stay
+together)
