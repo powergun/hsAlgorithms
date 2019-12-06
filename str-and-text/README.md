@@ -10,3 +10,5 @@ Text library is `text`
 ## Concatenation (append, join etc.)
 
 how to concatenate two or more str/text
+
+## Partition (split, unlines etc.)

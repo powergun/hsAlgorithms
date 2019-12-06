@@ -1,6 +1,8 @@
 
-import qualified Concat.Demo
+import qualified Concat.Append
+import qualified Partition.Split
 
 main :: IO ()
 main = do
-  Concat.Demo.demo
+  Concat.Append.demo
+  Partition.Split.demo
