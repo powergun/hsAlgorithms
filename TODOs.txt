@@ -1,4 +1,7 @@
 
+# string & text
+
+
 # restructure algorithms
 
 use programming haskell L5772 as the basis, re-categorise the 
