@@ -28,3 +28,7 @@ https://hackage.haskell.org/package/base-4.12.0.0/docs/Prelude.html#v:either
 source:
 
 https://hackage.haskell.org/package/base-4.12.0.0/docs/Prelude.html#v:maybe
+
+`fromMaybe`, see: https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-Maybe.html#v:fromMaybe
+
+exported from `Data.Maybe`
