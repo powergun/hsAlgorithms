@@ -1,4 +1,4 @@
-module MaybeFunc (demo) where
+module Maybe.MaybeFunc (demo) where
 
 import qualified Data.Maybe as Mb
 

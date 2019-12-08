@@ -1,4 +1,4 @@
-module EitherFunc (demo) where
+module Either.EitherFunc (demo) where
 
 import qualified Data.Either as E
 

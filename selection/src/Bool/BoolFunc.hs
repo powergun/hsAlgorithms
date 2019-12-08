@@ -1,4 +1,4 @@
-module BoolFunc (demo) where
+module Bool.BoolFunc (demo) where
 
 import qualified Control.Monad as M
 import qualified Data.Bool     as B

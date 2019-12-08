@@ -1,10 +1,12 @@
 
-import qualified BoolFunc
-import qualified EitherFunc
-import qualified MaybeFunc
+import qualified Bool.BoolFunc
+import qualified Either.EitherFunc
+import qualified Maybe.MaybeFunc
+import qualified Maybe.FromMaybe
 
 main :: IO ()
 main = do
-  BoolFunc.demo
-  EitherFunc.demo
-  MaybeFunc.demo
+  Bool.BoolFunc.demo
+  Either.EitherFunc.demo
+  Maybe.MaybeFunc.demo
+  Maybe.FromMaybe.demo
