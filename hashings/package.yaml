@@ -22,6 +22,8 @@ description: Please see the README on GitHub at <https://github.com/githubuser/h
 dependencies:
   - base >= 4.7 && < 5
   - cryptohash == 0.11.9
+  - bytestring
+  - byteable
 
 library:
   source-dirs: src
@@ -47,3 +49,7 @@ tests:
       - -with-rtsopts=-N
     dependencies:
       - hashings
+      - hspec
+      - tasty
+      - tasty-hunit
+      - tasty-quickcheck

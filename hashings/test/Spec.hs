@@ -1,2 +1,7 @@
+import qualified CryptohashOfficialTests
+import qualified TestFromByteString
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = do
+  TestFromByteString.demo
+  CryptohashOfficialTests.main
