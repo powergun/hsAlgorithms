@@ -61,6 +61,7 @@ demoDecoding = do
       tree = decode blob
   print . preorder $ tree
 
+-- toStrict: http://hackage.haskell.org/package/bytestring-0.10.10.0/docs/Data-ByteString-Lazy.html
 demoHashing :: IO ()
 demoHashing = do
   let tree1 = fromList [3, 1, 4, 15, 9, 26, 53, 5, 8, 97]

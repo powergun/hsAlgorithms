@@ -21,7 +21,7 @@ description: Please see the README on GitHub at <https://github.com/githubuser/h
 
 dependencies:
   - base >= 4.7 && < 5
-  - cryptohash == 0.11.9
+  - cryptonite == 0.25
   - bytestring
   - byteable
   - binary == 0.8.6.0

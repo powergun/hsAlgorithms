@@ -3,6 +3,9 @@
 inspired and needed by hsCrypto project, which (blockchain subproject)
 uses <http://hackage.haskell.org/package/cryptohash>
 
+IMPORTANT: cryptohash package is **deprecated** in favor of **cryptonite**;
+the official tests/examples from cryptohash can not compile
+
 ## Create hash from bytestring
 
 see: FromByteString.hs and tests

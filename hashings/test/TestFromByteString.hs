@@ -16,4 +16,4 @@ demo = hspec $ do
   describe "Create sha1 from word8 values" $ do
     it "Expect raw bytes (bytestring)" $ do
       let hexs = FromByteString.fromWord8s [1..10]
-      hexs `shouldBe` "\197\&9\RS0\138\242[B\213\147Mj \SUB4\232\152\210U\198"
+      hexs `shouldBe` "c5391e308af25b42d5934d6a201a34e898d255c6"
