@@ -4,7 +4,9 @@
 
 module FromBinTree where
 
+import           Crypto.Hash
 import           Data.Binary
+import qualified Data.ByteString      as B
 import qualified Data.ByteString.Lazy as BL
 import           Data.List            (sort)
 import           GHC.Generics         (Generic)
@@ -59,8 +61,18 @@ demoDecoding = do
       tree = decode blob
   print . preorder $ tree
 
+demoHashing :: IO ()
+demoHashing = do
+  let tree1 = fromList [3, 1, 4, 15, 9, 26, 53, 5, 8, 97]
+      tree2 = fromList [3, 1, 4, 15, 9, 26, 53, 5, 8, 97, -12]
+      hash' :: B.ByteString -> Digest SHA1
+      hash' = hash
+  print . hash' . BL.toStrict . encode $ tree1
+  print . hash' . BL.toStrict . encode $ tree2
+
 demo :: IO ()
 demo = do
   proofOfCorrectness
   demoEncoding
   demoDecoding
+  demoHashing
