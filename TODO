@@ -1,0 +1,18 @@
+
+data structures and algorithms, in Haskell
+http://okmij.org/ftp/Haskell/AlgorithmsH.html
+
+quicksort:
+https://medium.com/better-programming/quicksort-with-haskell-75cb07ec57f3
+
+github:
+https://github.com/graninas/Haskell-Algorithms
+
+containers library
+https://buildmedia.readthedocs.org/media/pdf/haskell-containers/latest/haskell-containers.pdf
+
+to read:
+PURELY FUNCTIONAL DATA STRUCTURES
+
+finger tree
+https://chrispenner.ca/posts/intro-to-finger-trees
