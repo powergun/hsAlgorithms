@@ -16,3 +16,6 @@ PURELY FUNCTIONAL DATA STRUCTURES
 
 finger tree
 https://chrispenner.ca/posts/intro-to-finger-trees
+
+zipper (zipper monad)
+https://wiki.haskell.org/Zipper
