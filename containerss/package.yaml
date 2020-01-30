@@ -23,6 +23,7 @@ dependencies:
   - base >= 4.7 && < 5
   - containers
   - vector
+  - criterion
 
 library:
   source-dirs: src
@@ -47,7 +48,4 @@ benchmarks:
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - base
       - containerss
-      - criterion
-      - random
