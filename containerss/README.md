@@ -22,3 +22,37 @@ Vector slicing is performant:
 > new index and offset with a reference to the same original Array.
 
 Recall the immutable-ref idiom in Rust.
+
+What is fusion P/1137
+
+> The vector library has loop fusion built in, so in a lot of cases,
+> such as with mapping, you won’t construct 4 vectors just because you mapped four times.
+
+#### ST monad
+
+P/1140
+
+> ST can be thought of as a mutable variant of the strict State monad
+> From another angle, it could be thought of as IO restricted exclusively
+> to mutation which is guaranteed safe.
+
+see: `src/FirstPrinciples/VectorMutable.hs`
+
+> The added time in the ST version is from freezing the mutable vector
+> into an ordinary vector.
+> it can be handy when you want to temporarily make something mutable and
+> ensure no mutable references are exposed outside of the ST monad.
+
+P/1141
+
+> For ST to work properly, the code that mutates the data must not get
+> reordered by the optimizer or otherwise monkeyed with, much like the
+> code in IO
+
+what is the mutation
+
+> It’s important to understand that s isn't the state you’re mutating.
+> The mutation is a side effect of having entered the closures that
+> perform the effect. This strict, unlifted state transformer monad
+> happens to structure your code in a way that preserves the intended
+> order of the computations and their associated effects.

@@ -24,9 +24,21 @@ dependencies:
   - containers
   - vector
   - criterion
+  - primitive == 0.6.4.0
 
 library:
   source-dirs: src
+
+executables:
+  profiling:
+    main: Main.hs
+    source-dirs: app/vector
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - containerss
 
 tests:
   containerss-test:
