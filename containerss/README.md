@@ -2,7 +2,11 @@
 
 ## Rediscover containers, First Principles
 
-P/1133
+### Profiling
+
+P/1120
+
+see also `hsPerf` project
 
 ### Vector
 
