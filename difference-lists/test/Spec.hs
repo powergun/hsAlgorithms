@@ -1,2 +1,5 @@
+import qualified FromScratchSpec
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = do
+  FromScratchSpec.spec
