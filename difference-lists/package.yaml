@@ -37,6 +37,19 @@ executables:
     dependencies:
       - difference-lists
 
+benchmarks:
+  prof:
+    main: Main.hs
+    source-dirs: bench
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - base
+      - difference-lists
+      - criterion
+
 tests:
   difference-lists-test:
     main: Spec.hs
