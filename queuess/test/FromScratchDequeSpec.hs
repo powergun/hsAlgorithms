@@ -2,7 +2,7 @@ module FromScratchDequeSpec (spec) where
 
 import           Test.Hspec
 
-import qualified FromScratchDeque as Q
+import qualified CorrectDeque as Q
 
 spec :: IO ()
 spec = hspec $ do
