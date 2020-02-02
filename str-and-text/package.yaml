@@ -22,6 +22,9 @@ description: Please see the README on GitHub at <https://github.com/githubuser/s
 dependencies:
   - base >= 4.7 && < 5
   - text
+  - zlib
+  - bytestring == 0.10.8.2
+  - raw-strings-qq
 
 library:
   source-dirs: src
