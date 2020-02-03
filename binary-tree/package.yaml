@@ -36,6 +36,20 @@ executables:
     dependencies:
       - binary-tree
 
+benchmarks:
+  prof:
+    main: Main.hs
+    source-dirs: bench
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - base
+      - binary-tree
+      - criterion
+      - random == 1.1
+
 tests:
   binary-tree-test:
     main: Spec.hs

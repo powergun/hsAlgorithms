@@ -22,3 +22,6 @@ fromList' (x:xs) = foldr insert' (Node Leaf x Leaf) xs
 preorder' :: Tree a -> [a]
 preorder' Leaf         = []
 preorder' (Node l x r) = preorder' l ++ [x] ++ preorder' r
+
+sort' :: (Ord a, Eq a) => [a] -> [a]
+sort' = preorder' . fromList'
