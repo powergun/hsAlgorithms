@@ -17,3 +17,6 @@ spec = hspec $ do
       let a = [] :: [Int]
       update' a 2 999 `shouldBe` []
 
+  describe "Suffixes" $ do
+    it "" $
+      suffixes' [1,2,3,4] `shouldBe` [[1,2,3,4], [2,3,4], [3,4], [4], []]
