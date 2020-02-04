@@ -1,14 +1,16 @@
-import Test.QuickCheck
+module LibCheck (main) where
+
+import           Test.QuickCheck
 
 -- haskell cookbook L4191
--- quick check lib generates tests; we write properties that 
+-- quick check lib generates tests; we write properties that
 -- should be verified by quick check
 
 -- generate arbitrary instances of queues
--- take a list of values and generate a queue out of it using 
+-- take a list of values and generate a queue out of it using
 -- the gen monad
 
-import qualified Lib as Q
+import qualified Lib             as Q
 
 qFromList :: Ord a => [a] -> Gen (Q.Queue a)
 qFromList xs =
@@ -16,13 +18,13 @@ qFromList xs =
 
 -- MY NOTES
 -- in order to call quickCheck :: Container -> Bool
--- it must implement the Arbitrary typeclass for the container 
+-- it must implement the Arbitrary typeclass for the container
 -- type
 -- No instance for (Arbitrary (Q.Queue Int))
 -- arising from a use of ‘quickCheck’
 -- L4261
--- at the heart of QuickCheck is the class Arbitrary, which has 
--- an arbitrary function to generate random instances of data 
+-- at the heart of QuickCheck is the class Arbitrary, which has
+-- an arbitrary function to generate random instances of data
 -- types
 -- class Testable prop where
 --   property :: prop -> Property
@@ -33,7 +35,7 @@ qFromList xs =
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 -- then we can test a function a -> prop
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
--- This helps us test our functions such as 
+-- This helps us test our functions such as
 -- verifyLeftist :: Queue a -> Bool
 -- Bool is a testable property thus our function also becomes
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -46,18 +48,18 @@ instance (Arbitrary a, Ord a) => Arbitrary (Q.Queue a) where
 
 -- L4211
 -- verify the claim about the leftist property of the tree
--- write a function that takes a tree and verifies that each 
+-- write a function that takes a tree and verifies that each
 -- node follows the leftist property
 verifyLeftist :: Q.Queue a -> Bool
 verifyLeftist Q.Empty = True
 verifyLeftist q@(Q.Queue rnk v l r) =
   and [ qRank q == rnk
-      , qRank l >= qRank r 
+      , qRank l >= qRank r
       , verifyLeftist l
       , verifyLeftist r ]
   where
     qRank :: Q.Queue a -> Int
-    qRank Q.Empty = 0
+    qRank Q.Empty           = 0
     qRank (Q.Queue _ _ l r) =  1 + minimum [qRank l, qRank r]
 
 -- test the heap order property of the queue
@@ -73,7 +75,7 @@ heapOrdered (Q.Queue _ v l@(Q.Queue _ lv _ _) r@(Q.Queue _ rv _ _)) =
 
 main :: IO ()
 main = do
-  print 
+  print
     "//////// verify leftist property /////////////////////////"
   quickCheck (verifyLeftist :: Q.Queue Int -> Bool)
   print

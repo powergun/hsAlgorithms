@@ -1,6 +1,6 @@
-module Main where
+module LibDemo (demo) where
 
-import Lib
+import           Lib
 
 demoQueueCreation :: IO ()
 demoQueueCreation = do
@@ -26,7 +26,7 @@ demoQueueCreationFoldl = do
   let q = foldl (flip insertQ) emptyQ [3, 14, 1, 59, 2, 6, -535, 8, 97]
   print q
 
-main :: IO ()
-main = do
+demo :: IO ()
+demo = do
   demoQueueCreation
   demoQueueCreationFoldl

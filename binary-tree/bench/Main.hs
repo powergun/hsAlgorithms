@@ -37,4 +37,4 @@ memberBench = do
 main :: IO ()
 main = do
   sortBench
-  -- memberBench
+  memberBench
