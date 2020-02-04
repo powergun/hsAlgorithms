@@ -15,14 +15,19 @@ spec = hspec $ do
       fromList' emptyList `shouldBe` leaf
     it "Expect pre-order from a singleton tree" $ do
       let tree = insert' 10 (Node Leaf 1 Leaf)
+          tree' = insert'' 10 (Node Leaf 1 Leaf)
       preorder' tree `shouldBe` [1, 10]
+      preorder' tree' `shouldBe` [1, 10]
     it "Expect pre-order from a tree created from an unordered list" $ do
       let tree = fromList' unordered
       preorder' tree `shouldBe` sort unordered
 
   describe "Membership check" $ do
-    it "Expect a member" $
+    it "Expect a member" $ do
       member' 53 (fromList' unordered) `shouldBe` True
+      member'' 53 (fromList' unordered) `shouldBe` True
     it "Expect not a member" $ do
       member' 100 (fromList' unordered) `shouldBe` False
       member' 100 leaf `shouldBe` False
+      member'' 100 (fromList' unordered) `shouldBe` False
+      member'' 100 leaf `shouldBe` False
