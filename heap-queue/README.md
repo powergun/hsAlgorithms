@@ -16,8 +16,20 @@ rank
 
 > leftist property: the **rank** of any **left child** is at least as large
 > as the rank of its right sibling.
-> **The rank of a node is defined to be the length of its right spine**
-> **i.e., the rightmost path from the node in question to an empty node**
+> **The rank of a node is defined to be the length of its right spine** > **i.e., the rightmost path from the node in question to an empty node**
+
+P/28 Exercise 3.1 Proof (see: <https://github.com/rst76/pfds/blob/master/ch03/ex.3.1.md>)
+
+```text
+       o
+     o   o
+    o o o o <- can not delete any of these
+ .............
+```
+
+given the rank is D, size is N, the minimal size N = 2 ^ D - 1
+because it is not possible to remove any leaf nodes without violating
+the leftist law
 
 what can this property do
 

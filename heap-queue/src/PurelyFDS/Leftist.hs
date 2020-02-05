@@ -48,6 +48,15 @@ fromList :: (Eq a, Ord a) => [a] -> Heap a
 fromList []     = Leaf
 fromList (x:xs) = foldr insert (Node 1 x Leaf Leaf) xs
 
+fromList' :: (Eq a, Ord a) => [a] -> Heap a
+fromList' [] = Leaf
+fromList' xs =
+  let mergePairs (a:b:rest) = mergeT a b : mergePairs rest
+      mergePairs ns         = ns
+      mergeAll [n] = n
+      mergeAll ns  = mergeAll (mergePairs ns)
+  in mergeAll (fmap (\x -> Node 1 x Leaf Leaf) xs)
+
 pop :: (Eq a, Ord a) => Heap a -> Maybe (a, Heap a)
 pop Leaf           = Nothing
 pop (Node _ x l r) = Just (x, mergeT l r)

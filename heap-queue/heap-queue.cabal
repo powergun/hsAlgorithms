@@ -1,0 +1,73 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 7ff509797bb2b44d5e757f06fd6e088b41e2df86e7970492ab813a45240138a1
+
+name:           heap-queue
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/heap-queue#readme>
+homepage:       https://github.com/githubuser/heap-queue#readme
+bug-reports:    https://github.com/githubuser/heap-queue/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/heap-queue
+
+library
+  exposed-modules:
+      Lib
+      PurelyFDS.Leftist
+      PurelyFDS.WeightBiased
+  other-modules:
+      Paths_heap_queue
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite heap-queue-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      LeftistSpec
+      LibCheck
+      LibDemo
+      WeightBiasedSpec
+      Paths_heap_queue
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , heap-queue
+    , hspec
+  default-language: Haskell2010
+
+benchmark prof
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Paths_heap_queue
+  hs-source-dirs:
+      bench
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base
+    , criterion
+    , heap-queue
+    , random ==1.1
+  default-language: Haskell2010
