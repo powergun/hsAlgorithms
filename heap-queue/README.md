@@ -1,4 +1,4 @@
-# Leftist Heaps
+# Heaps
 
 ## in Haskell Cookbook
 
@@ -10,7 +10,9 @@
 > at each node is no larger than the elements at its children. Under this
 > ordering, the minimum element in a tree is always at the root.
 
-### Right Spine and Property
+### Leftist, Right Spine and Leftist's Property
+
+see: `src/PurelyFDS/Leftist.hs`
 
 rank
 
@@ -40,3 +42,20 @@ what can this property do
 > by merging their right spines as you would merge two sorted lists, and
 > then swapping the children of nodes along this path as necessary to
 > **restore the leftist property**.
+
+### Weight-Biased Leftist Heap
+
+P/30
+
+> Weight-biased leftist heaps are an alternative to leftist heaps that
+> replace the leftist property with the weight-biased leftist property:
+> **the size of any left child is at least as large as the size of its right sibling.**
+
+see: `src/PurelyFDS/WeightBiased.hs`
+
+### Binomial Heaps
+
+P/30
+
+insert and merge can be run in O(1) time in various flavours of
+binomial heaps
