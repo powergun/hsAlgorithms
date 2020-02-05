@@ -25,6 +25,20 @@ dependencies:
 library:
   source-dirs: src
 
+benchmarks:
+  prof:
+    main: Main.hs
+    source-dirs: bench
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - base
+      - leftistQ
+      - criterion
+      - random == 1.1
+
 tests:
   leftistQ-test:
     main: Spec.hs
