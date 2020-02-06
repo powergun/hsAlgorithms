@@ -59,3 +59,42 @@ P/30
 
 insert and merge can be run in O(1) time in various flavours of
 binomial heaps
+
+P/31
+
+> A binomial tree of rank 0 is a singleton node.
+> A binomial tree of rank r + 1 is formed by linking two binomial
+> trees of rank r, making one tree the leftmost child of the other.
+> From this definition, it is easy to see that a binomial **tree of
+> rank r contains exactly 2^r nodes.**
+
+Binomial tree's children order
+
+> Each list of children is maintained in decreasing order of rank,
+> and elements are stored in heap order. We maintain heap order by
+> always linking trees with larger roots under trees with smaller roots.
+
+Binomial heap is a collection of heap-ordered binomial trees
+
+> a binomial heap is a collection of heap-ordered binomial trees in which
+> **no two trees have the same rank**. This collection is represented as a list
+> of trees **in increasing order of rank**
+
+P/32
+
+Binomal heap and binary representation of a decimal number
+
+> Because each binomial tree contains 2^r elements and no two trees have
+> the same rank, the trees in a binomial heap of size n correspond exactly
+> to the ones in the binary representation of n.
+> a binomial heap of size 21 (0b10101) would contain one tree of rank 0,
+> one tree of rank 2, and one tree of rank 4
+> a binary representation contains at most log(n) + 1 `1`s; therefore
+> a binomal heap of size n contains at most log(n) + 1 binomal trees
+
+P/32
+
+worst case of insert() is log(n)
+
+> The worst case is insertion into a heap of size n = 2^k — 1, requiring a
+> total of k links and O(k) = O(log n) time.
