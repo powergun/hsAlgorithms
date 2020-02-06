@@ -25,6 +25,19 @@ dependencies:
 library:
   source-dirs: src
 
+benchmarks:
+  prof:
+    main: Main.hs
+    source-dirs: bench
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - base
+      - lazy-stream
+      - criterion
+
 tests:
   lazy-streams-test:
     main: Spec.hs

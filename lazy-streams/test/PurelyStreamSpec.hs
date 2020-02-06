@@ -11,6 +11,11 @@ spec = hspec $ do
       let l = [1..100]
       (Stream.toList . Stream.fromList $ l) `shouldBe` l
 
+  describe "Expect Lazy evaluation" $ do
+    it "comparison" $ do
+      let s = Stream.fromList [1..1000000000000]
+      Stream.toList s `shouldNotBe` [1]
+
   describe "Stream Functor, Applicative and Monad" $ do
     let l = [1..10]
         f = (+ 1)
@@ -24,3 +29,10 @@ spec = hspec $ do
 
     it "Monad" $ do
       Stream.toList ((Stream.fromList l) >>= mf) `shouldBe` fmap f l
+
+  describe "Stream reversing" $ do
+    let l = [1..10]
+
+    it "compare to list.reverse" $ do
+      let l' = Stream.toList . Stream.reverse . Stream.fromList $ l
+      l' `shouldBe` reverse l

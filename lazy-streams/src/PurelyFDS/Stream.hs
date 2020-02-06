@@ -1,6 +1,7 @@
 module PurelyFDS.Stream where
 
-import           Prelude hiding ((++))
+import           Control.Monad (join)
+import           Prelude       hiding (reverse, (++))
 
 data Stream a = NIL
               | CONS a (Stream a)
@@ -29,4 +30,12 @@ instance Applicative Stream where
 instance Monad Stream where
   return = pure
   NIL >>= f = NIL
-  (CONS a s) >>= f = f a ++ (s >>= f)
+  x@(CONS a s) >>= f = join $ fmap f x --f a `mappend` (s >>= f)
+
+reverse :: Stream a -> Stream a
+reverse NIL        = NIL
+reverse (CONS x s) = reverse s ++ CONS x NIL
+
+instance Foldable Stream where
+  foldr f z NIL        = z
+  foldr f z (CONS x s) = f x (foldr f z s)
