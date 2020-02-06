@@ -22,6 +22,16 @@ sortBench = do
     , bench "sort list using BST-sort" $ whnf BST.sort' workload
     ]
 
+sortBenchOrderedData :: IO ()
+sortBenchOrderedData = do
+  let workload = reverse [1..1000000]
+  defaultMain
+    [ bench "sort (ordered) list using list-sort" $
+      whnf sort workload
+    , bench "sort (ordered) list using BST-sort" $
+      whnf BST.sort' workload
+    ]
+
 memberBench :: IO ()
 memberBench = do
   g <- Sr.getStdGen
@@ -36,5 +46,6 @@ memberBench = do
 
 main :: IO ()
 main = do
-  sortBench
-  memberBench
+  -- sortBench
+  -- memberBench
+  sortBenchOrderedData
