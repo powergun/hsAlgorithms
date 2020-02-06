@@ -36,3 +36,16 @@ because: `2^min_depth - 1 <= n` (think about the complete-balance tree);
 therefore `min_depth <= log(n + 1)`;
 plug in the previous property:
 `max_depth <= 2 * min_depth => max_depth <= 2 * log(n + 1)`
+
+the balance function:
+
+P/36
+
+> the balance function acts just like the T constructor except that
+> it massages its arguments as necessary to enforce the balance
+> invariants.
+
+repair red-red violation
+
+> The balance function detects and repairs each red-red violation
+> when it processes the black parent of the red node with a red child.

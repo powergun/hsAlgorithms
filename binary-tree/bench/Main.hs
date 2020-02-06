@@ -1,11 +1,12 @@
 module Main (main) where
 
 import           Criterion
-import           Criterion.Main (defaultMain)
-import           Data.List      (sort)
-import qualified System.Random  as Sr
+import           Criterion.Main   (defaultMain)
+import           Data.List        (sort)
+import qualified System.Random    as Sr
 
-import qualified PurelyFDS.BST  as BST
+import qualified PurelyFDS.BST    as BST
+import qualified PurelyFDS.RBTree as RBTree
 
 genList :: Sr.StdGen -> Int -> [Int]
 genList g n =
@@ -22,14 +23,17 @@ sortBench = do
     , bench "sort list using BST-sort" $ whnf BST.sort' workload
     ]
 
+-- shows RBTree has TERRIBLE performance!
 sortBenchOrderedData :: IO ()
 sortBenchOrderedData = do
-  let workload = reverse [1..1000000]
+  let workload = reverse [1..1000]
   defaultMain
     [ bench "sort (ordered) list using list-sort" $
       whnf sort workload
     , bench "sort (ordered) list using BST-sort" $
       whnf BST.sort' workload
+    , bench "sort (ordered) list using RBTree-sort" $
+      whnf RBTree.sort workload
     ]
 
 memberBench :: IO ()
@@ -46,6 +50,5 @@ memberBench = do
 
 main :: IO ()
 main = do
-  -- sortBench
-  -- memberBench
-  sortBenchOrderedData
+  sortBench
+  memberBench
