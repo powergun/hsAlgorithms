@@ -23,6 +23,16 @@ the invariants of RB tree
 > Invariant 1. No red node has a red child.
 > Invariant 2. Every path from the root to an empty node contains the same number of black nodes.
 > Taken together, these two invariants guarantee that the longest
-> possible path in a red-black tree, one with alternating black and
+> possible path in a red-black tree, **one with alternating black and
 > red nodes, is no more than twice as long as the shortest possible
-> path, one with black nodes only.
+> path, one with black nodes only.**
+
+Exercise 3.8
+
+see: <https://github.com/rst76/pfds/blob/master/ch03/ex.3.8.md>
+
+using the guarantee of the two invariants: `max_depth <= 2 * min_depth`;
+because: `2^min_depth - 1 <= n` (think about the complete-balance tree);
+therefore `min_depth <= log(n + 1)`;
+plug in the previous property:
+`max_depth <= 2 * min_depth => max_depth <= 2 * log(n + 1)`
