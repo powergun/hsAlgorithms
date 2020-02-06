@@ -1,7 +1,8 @@
 module PurelyFDS.Binomial where
 
-import           Data.Bool (bool)
-import           Prelude   hiding (elem)
+import           Data.Bool  (bool)
+import           Data.Maybe (maybe)
+import           Prelude    hiding (elem)
 
 data Tree a = Node {rank :: Int, elem :: a, children :: [Tree a]}
 type Heap a = [Tree a]
@@ -14,8 +15,9 @@ insTree :: (Eq a, Ord a) => Tree a -> Heap a -> Heap a
 insTree t []           = [t]
 insTree t trees@(x:xs) =
   bool (insTree (link t x) xs) (t:trees) (rank t < rank x)
-  --            ^^^^^^^^^^ t ceases to exist, becomes a new tree
+  --            ^^^^^^^^^^ t ceases to exist, and becomes a new tree
   --                       no need to worry about mutability
+  --                       recall the analogue to `carry` in bit arith
 
 insert :: (Eq a, Ord a) => a -> Heap a -> Heap a
 insert x = insTree (Node 0 x [])
@@ -47,3 +49,20 @@ merge hp1@(t1:ts1) hp2@(t2:ts2) =
         then t2 : merge hp1 ts2
         else
           insTree (link t1 t2) (merge ts1 ts2)
+
+pop :: (Eq a, Ord a) => Heap a -> Maybe (a, Heap a)
+pop [] = Nothing
+pop hp =
+  let ((Node r x children), hp') = removeMinTree hp
+      hp'' = merge (reverse children) hp'
+  in Just (x, hp'')
+
+sort :: (Eq a, Ord a) => [a] -> [a]
+sort [] = []
+sort xs =
+  let toList :: (Eq a, Ord a) => Heap a -> [a]
+      toList hp =
+        case pop hp of
+          Nothing       -> []
+          Just (x, hp') -> x: toList hp'
+  in toList . fromList $ xs

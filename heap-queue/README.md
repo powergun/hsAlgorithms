@@ -98,3 +98,13 @@ worst case of insert() is log(n)
 
 > The worst case is insertion into a heap of size n = 2^k — 1, requiring a
 > total of k links and O(k) = O(log n) time.
+
+P/33
+
+implementing deleteMin (aka pop())
+
+> After discarding the root of the extracted tree, we must somehow return
+> the children of the discarded node to the remaining list of trees.
+> Note that each list of children **is almost a valid binomial heap.**
+> convert the list of children into a valid binomial heap by reversing
+> it and then merge this list with the remaining trees.
