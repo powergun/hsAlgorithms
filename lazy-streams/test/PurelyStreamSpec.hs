@@ -2,6 +2,7 @@ module PurelyStreamSpec (spec) where
 
 import           Test.Hspec
 
+import           Data.List        (sort)
 import qualified PurelyFDS.Stream as Stream
 
 spec :: IO ()
@@ -36,3 +37,11 @@ spec = hspec $ do
     it "compare to list.reverse" $ do
       let l' = Stream.toList . Stream.reverse . Stream.fromList $ l
       l' `shouldBe` reverse l
+
+  describe "Stream sort" $ do
+    let s1 = Stream.fromList [2..4]
+        s2 = Stream.fromList [1..10]
+
+    it "Merge two ordered Streams " $ do
+      let s = Stream.mergeOrd s1 s2
+      Stream.toList s `shouldBe` sort ([2..4] ++ [1..10])
