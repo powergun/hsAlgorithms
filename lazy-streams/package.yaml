@@ -35,7 +35,7 @@ benchmarks:
       - -with-rtsopts=-N
     dependencies:
       - base
-      - lazy-stream
+      - lazy-streams
       - criterion
 
 tests:
