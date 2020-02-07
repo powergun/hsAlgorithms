@@ -45,3 +45,11 @@ spec = hspec $ do
     it "Merge two ordered Streams " $ do
       let s = Stream.mergeOrd s1 s2
       Stream.toList s `shouldBe` sort ([2..4] ++ [1..10])
+
+  describe "Extract minimum" $ do
+    let s1 = Stream.fromList . reverse $ [1..1000]
+        s2 = Stream.fromList . reverse $ fmap (* (-1)) [1..100]
+
+    it "Expect min" $ do
+      Stream.minimum s1 `shouldBe` 1
+      Stream.minimum (Stream.mergeOrd s1 s2) `shouldBe` (-100)

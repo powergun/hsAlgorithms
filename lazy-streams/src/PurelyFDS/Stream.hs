@@ -56,3 +56,7 @@ mergeOrd NIL s = s
 mergeOrd s NIL = s
 mergeOrd s1@(CONS x xs) s2@(CONS y ys) =
   bool (CONS y (mergeOrd s1 ys)) (CONS x (mergeOrd xs s2)) (x < y)
+
+minimum :: (Ord a, Eq a) => Stream a -> a
+minimum (CONS x xs) =
+  foldr (\n x' -> bool x' n (n < x')) x xs
