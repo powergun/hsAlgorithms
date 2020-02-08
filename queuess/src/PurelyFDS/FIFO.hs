@@ -1,6 +1,6 @@
 module PurelyFDS.FIFO where
 
-import           Prelude hiding (head, length, tail)
+import           Prelude hiding (head, last, length, tail)
 import qualified Prelude
 
 data Queue a = Queue [a] [a]

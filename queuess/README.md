@@ -33,3 +33,10 @@ the invariant:
 
 > The goal is to maintain the invariant that f is empty only if r is
 > also empty (i.e., the entire queue is empty).
+
+### amortized tail() and snoc(), O(1), using banker's method
+
+P/53
+
+> Using the banker's method, we maintain a credit invariant that every
+> element in the rear list is associated with a single credit.
