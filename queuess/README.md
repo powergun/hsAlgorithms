@@ -21,3 +21,15 @@ example (FIFO) is revisited as a case study.
 
 see `src/PurelyFDS/FIFO.hs`; note the structure is based on two
 lists: `f`, `r`
+
+P/52
+
+> Elements are added to r and removed from f, so they must somehow
+> migrate from one list to the other. This migration is accomplished
+> by reversing r and installing the result as the new f whenever f
+> would otherwise become empty, simultaneously setting the new r to [].
+
+the invariant:
+
+> The goal is to maintain the invariant that f is empty only if r is
+> also empty (i.e., the entire queue is empty).
