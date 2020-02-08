@@ -108,3 +108,28 @@ implementing deleteMin (aka pop())
 > Note that each list of children **is almost a valid binomial heap.**
 > convert the list of children into a valid binomial heap by reversing
 > it and then merge this list with the remaining trees.
+
+### Splay Heap (Splay Tree)
+
+P/56
+
+see: `src/PurelyFDS/SplayTree.hs`;
+reference: <https://en.wikipedia.org/wiki/Splay_tree>
+
+> Splay trees are a close relative of balanced binary search trees,
+> but they maintain no explicit balance information.
+> Instead, every operation blindly restructures the tree using some
+> simple transformations that tend to increase balance.
+> Although any individual operation can take as much as O(n) time,
+> we will show that every operation runs in O(log n) amortized time
+
+major difference to balanced binary search tree
+
+> A major difference between splay trees and balanced binary search
+> trees such as the red-black trees is that splay trees are restructured
+> even during queries (e.g., member) instead of only during updates
+> (e.g., insert).
+> (while splay tree is awkward for sets or infinite maps) A good example
+> is the heap abstraction, where the only interesting query is findMin.
+> In fact, as we will see, splay trees make an excellent implementation
+> of heaps

@@ -23,6 +23,9 @@ insert x tree@(Node color left v right) =
 
 balance :: (Eq a, Ord a) => Color -> Tree a -> a -> Tree a -> Tree a
 {- recall the concept of "rotation", the pivot here is r-y
+see pyAlgorithms for a much more detailed step-by-step explanation
+of the 4 cases of rotation
+
         B-z
     r-y      d
   r-x   c
