@@ -13,3 +13,11 @@ I fixed this in `CorrectDeque.hs` and created a benchmark driver
 
 `stack bench` - the good impl (94.14 μs) is 100x faster than the
 navie impl (153.1 ms)
+
+## Purely Functional Data Structure, FIFO and Amortization P/53
+
+This chapter focuses on amortization and cost analysis; the Queue
+example (FIFO) is revisited as a case study.
+
+see `src/PurelyFDS/FIFO.hs`; note the structure is based on two
+lists: `f`, `r`
