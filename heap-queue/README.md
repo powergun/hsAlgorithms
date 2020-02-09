@@ -140,3 +140,15 @@ P/57
 
 > guiding principle of splay trees: search paths should be restructured
 > to reduce the depth of every node in the path by about half.
+
+**performance superiority** of splay tree
+
+> Splay trees, perhaps in combination with the ExplicitMin functor, are
+> the fastest known implementation of heaps for most applications that
+> do not depend on persistence and that do not call the merge function.
+> A particularly pleasant feature of splay trees is that they naturally
+> adapt to any order that happens to be present in the input data. For
+> example, using splay heaps to sort an already sorted list takes only
+> O(n) time rather than 0(n log n)
+
+### Pairing Heaps
