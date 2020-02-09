@@ -133,3 +133,10 @@ major difference to balanced binary search tree
 > is the heap abstraction, where the only interesting query is findMin.
 > In fact, as we will see, splay trees make an excellent implementation
 > of heaps
+
+guiding principle of search tree
+
+P/57
+
+> guiding principle of splay trees: search paths should be restructured
+> to reduce the depth of every node in the path by about half.

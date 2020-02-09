@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 50c5ae016413c0bc88e956f042e0c110a1d990865761393917fd1c4f37aee72c
+-- hash: 2b07b2b105f233922049338e98e1750fd45b3e8544c96cd647b6b6d320c4e8e9
 
 name:           heap-queue
 version:        0.1.0.0
@@ -30,6 +30,7 @@ library
       Lib
       PurelyFDS.Binomial
       PurelyFDS.Leftist
+      PurelyFDS.SplayTree
       PurelyFDS.WeightBiased
   other-modules:
       Paths_heap_queue
@@ -47,6 +48,7 @@ test-suite heap-queue-test
       LeftistSpec
       LibCheck
       LibDemo
+      SplayTreeSpec
       WeightBiasedSpec
       Paths_heap_queue
   hs-source-dirs:

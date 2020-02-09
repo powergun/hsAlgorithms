@@ -2,6 +2,7 @@ import qualified BinomialSpec
 import qualified LeftistSpec
 import qualified LibCheck
 import qualified LibDemo
+import qualified SplayTreeSpec
 import qualified WeightBiasedSpec
 
 main :: IO ()
@@ -11,4 +12,5 @@ main = do
   LeftistSpec.spec
   WeightBiasedSpec.spec
   BinomialSpec.spec
+  SplayTreeSpec.spec
 
