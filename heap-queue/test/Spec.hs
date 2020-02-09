@@ -2,6 +2,7 @@ import qualified BinomialSpec
 import qualified LeftistSpec
 import qualified LibCheck
 import qualified LibDemo
+import qualified PairingHeapsSpec
 import qualified SplayTreeSpec
 import qualified WeightBiasedSpec
 
@@ -13,4 +14,5 @@ main = do
   WeightBiasedSpec.spec
   BinomialSpec.spec
   SplayTreeSpec.spec
+  PairingHeapsSpec.spec
 
