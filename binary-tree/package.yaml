@@ -37,7 +37,7 @@ benchmarks:
       - base
       - binary-tree
       - criterion
-      - random == 1.1
+      - random >= 1.1
 
 tests:
   binary-tree-test:
